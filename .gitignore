@@ -66,3 +66,5 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+Mezu/Mezu.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+Mezu/Mezu.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
