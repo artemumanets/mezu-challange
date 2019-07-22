@@ -98,11 +98,12 @@
 			isa = PBXGroup;
 			children = (
 				4F8C58C722E5D96300556012 /* AppDelegate.swift */,
+				4F8C58F622E5DB0A00556012 /* Application */,
+				4F8C58FC22E5DC6600556012 /* Helpers */,
+				4F8C58FB22E5DC5E00556012 /* Network */,
+				4F8C58FA22E5DC5A00556012 /* Configuration */,
+				4F8C58F922E5DC5500556012 /* Resources */,
 				4F8C58C922E5D96300556012 /* ViewController.swift */,
-				4F8C58CB22E5D96300556012 /* Main.storyboard */,
-				4F8C58CE22E5D96400556012 /* Assets.xcassets */,
-				4F8C58D022E5D96400556012 /* LaunchScreen.storyboard */,
-				4F8C58D322E5D96400556012 /* Info.plist */,
 			);
 			path = Mezu;
 			sourceTree = "<group>";
@@ -123,6 +124,93 @@
 				4F8C58E922E5D96400556012 /* Info.plist */,
 			);
 			path = MezuUITests;
+			sourceTree = "<group>";
+		};
+		4F8C58F622E5DB0A00556012 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4F8C58F822E5DC3B00556012 /* Common */,
+				4F8C58F722E5DC2F00556012 /* Initial */,
+				4F8C58FD22E5DC8C00556012 /* List */,
+				4F8C58FE22E5DC9300556012 /* Details */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4F8C58F722E5DC2F00556012 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		4F8C58F822E5DC3B00556012 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4F8C58F922E5DC5500556012 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F8C58CB22E5D96300556012 /* Main.storyboard */,
+				4F8C58CE22E5D96400556012 /* Assets.xcassets */,
+				4F8C58D022E5D96400556012 /* LaunchScreen.storyboard */,
+				4F8C58D322E5D96400556012 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4F8C58FA22E5DC5A00556012 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		4F8C58FB22E5DC5E00556012 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4F8C58FC22E5DC6600556012 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4F8C58FF22E5DCA600556012 /* Managers */,
+				4F8C590022E5DCAB00556012 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4F8C58FD22E5DC8C00556012 /* List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		4F8C58FE22E5DC9300556012 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		4F8C58FF22E5DCA600556012 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4F8C590022E5DCAB00556012 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
