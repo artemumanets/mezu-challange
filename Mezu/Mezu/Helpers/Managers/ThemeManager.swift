@@ -15,6 +15,7 @@ enum R {
 
         static let background = UIColor(hex: 0x2f2f2f)
         static let content = UIColor(hex: 0xf3f3f3)
+        static let placeholder = Color.content.withAlphaComponent(0.5)
         static let separator = UIColor(hex: 0x9e9e9e)
         static let accent = UIColor(hex: 0xfed700)
 

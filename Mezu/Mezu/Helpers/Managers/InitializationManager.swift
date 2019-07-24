@@ -26,7 +26,7 @@ class InitializationManager {
 
     class func createAppWindow() -> UIWindow {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = NavigationController(rootViewController: ListViewController())
+        window.rootViewController = InitialViewController()
         window.backgroundColor = R.Color.background
         window.makeKeyAndVisible()
         return window

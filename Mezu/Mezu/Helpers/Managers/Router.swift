@@ -30,7 +30,7 @@ class Router {
 
         switch destination {
         case .details: return DetailsViewController()
-        case .list: return ListViewController()
+        case .list: return NavigationController(rootViewController: ListViewController())
         }
     }
 }
