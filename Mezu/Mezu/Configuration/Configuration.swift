@@ -2,7 +2,7 @@
 //  Configuration.swift
 //  Mezu
 //
-//  Created by Artem Umanets on 03/07/2019.
+//  Created by Artem Umanets on 23/07/2019.
 //  Copyright © 2019 Artem Umanets. All rights reserved.
 //
 
@@ -23,5 +23,6 @@ enum Configuration {
 
 enum Animation {
 
+    static let fast = 0.15
     static let normal = 0.3
 }

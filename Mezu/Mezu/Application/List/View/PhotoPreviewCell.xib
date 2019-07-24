@@ -24,6 +24,7 @@
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="NFv-QL-qLA" firstAttribute="leading" secondItem="GCY-sC-KGs" secondAttribute="leading" id="I2l-b3-mds"/>
                 <constraint firstAttribute="trailing" secondItem="NFv-QL-qLA" secondAttribute="trailing" id="c5I-ZQ-INT"/>

@@ -47,6 +47,12 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
         viewModel.populate(photoCell: cell, photo: photo)
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        Router.push(from: self, to: .details)
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }
 
 extension ListViewController: UICollectionViewDelegateFlowLayout {
