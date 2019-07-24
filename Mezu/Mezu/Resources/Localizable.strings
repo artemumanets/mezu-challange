@@ -11,11 +11,14 @@
 "Global.Continue" = "Continue";
 "Global.Retry" = "Retry";
 
+/* Inital */
+"Initial.Info" = "Welcome!\nList photos from Flickr by user name.";
+"Initial.Placeholder" = "Username";
+
+
 /* Errors */
 "Error.Title" = "Error";
-/*
- "Error.APIInvalidURL" = "Could not communicate with the server.";
+"Error.APIInvalidURL" = "Could not communicate with the server.";
 "Error.APIGeneric" = "There was a problem communicating with the server.";
 "Error.APIHTTPStatusCode" = "The server responded with status code:";
 "Error.NetworkGeneric" = "An error occured performing your request. Please try again later.";
- */

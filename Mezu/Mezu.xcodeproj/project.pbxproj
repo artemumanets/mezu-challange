@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F53D69F22E70E94000FEE5C /* SequenceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D68B22E70E94000FEE5C /* SequenceRequest.swift */; };
+		4F53D6A022E70E94000FEE5C /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D68D22E70E94000FEE5C /* ParserProtocol.swift */; };
+		4F53D6A122E70E94000FEE5C /* JSONDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D68E22E70E94000FEE5C /* JSONDataParser.swift */; };
+		4F53D6A222E70E94000FEE5C /* FetcherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D69022E70E94000FEE5C /* FetcherProtocol.swift */; };
+		4F53D6A322E70E94000FEE5C /* APIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D69122E70E94000FEE5C /* APIFetcher.swift */; };
+		4F53D6A522E70E94000FEE5C /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D69422E70E94000FEE5C /* ResponseProtocol.swift */; };
+		4F53D6A922E70E94000FEE5C /* FLResponsePeopleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D69822E70E94000FEE5C /* FLResponsePeopleList.swift */; };
+		4F53D6AC22E70E94000FEE5C /* FLRequestFindByUserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D69C22E70E94000FEE5C /* FLRequestFindByUserName.swift */; };
+		4F53D6AD22E70E94000FEE5C /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D69D22E70E94000FEE5C /* RequestProtocol.swift */; };
+		4F53D6B022E70EC3000FEE5C /* APIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6AF22E70EC3000FEE5C /* APIOperation.swift */; };
+		4F53D6B222E85EAE000FEE5C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6B122E85EAE000FEE5C /* Configuration.swift */; };
+		4F53D6B422E86988000FEE5C /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6B322E86988000FEE5C /* ServiceError.swift */; };
+		4F53D6B622E86BEA000FEE5C /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F53D6B522E86BEA000FEE5C /* InitialViewController.xib */; };
+		4F53D6B822E8768C000FEE5C /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6B722E8768C000FEE5C /* UITextField+Extensions.swift */; };
+		4F53D6BB22E87709000FEE5C /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6BA22E87709000FEE5C /* LoaderView.swift */; };
+		4F53D6BD22E8773C000FEE5C /* LoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6BC22E8773C000FEE5C /* LoaderManager.swift */; };
+		4F53D6C122E877C1000FEE5C /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6C022E877C1000FEE5C /* InitialViewModel.swift */; };
+		4F53D6C422E8780B000FEE5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6C322E8780B000FEE5C /* User.swift */; };
+		4F53D6C922E8830F000FEE5C /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6C822E8830F000FEE5C /* AppData.swift */; };
 		4F8C58C822E5D96300556012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C58C722E5D96300556012 /* AppDelegate.swift */; };
 		4F8C58CF22E5D96400556012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C58CE22E5D96400556012 /* Assets.xcassets */; };
 		4F8C58D222E5D96400556012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C58D022E5D96400556012 /* LaunchScreen.storyboard */; };
@@ -50,6 +69,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F53D68B22E70E94000FEE5C /* SequenceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceRequest.swift; sourceTree = "<group>"; };
+		4F53D68D22E70E94000FEE5C /* ParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
+		4F53D68E22E70E94000FEE5C /* JSONDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataParser.swift; sourceTree = "<group>"; };
+		4F53D69022E70E94000FEE5C /* FetcherProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetcherProtocol.swift; sourceTree = "<group>"; };
+		4F53D69122E70E94000FEE5C /* APIFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIFetcher.swift; sourceTree = "<group>"; };
+		4F53D69422E70E94000FEE5C /* ResponseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
+		4F53D69822E70E94000FEE5C /* FLResponsePeopleList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLResponsePeopleList.swift; sourceTree = "<group>"; };
+		4F53D69C22E70E94000FEE5C /* FLRequestFindByUserName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLRequestFindByUserName.swift; sourceTree = "<group>"; };
+		4F53D69D22E70E94000FEE5C /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		4F53D6AF22E70EC3000FEE5C /* APIOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIOperation.swift; sourceTree = "<group>"; };
+		4F53D6B122E85EAE000FEE5C /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4F53D6B322E86988000FEE5C /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		4F53D6B522E86BEA000FEE5C /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
+		4F53D6B722E8768C000FEE5C /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		4F53D6BA22E87709000FEE5C /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		4F53D6BC22E8773C000FEE5C /* LoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderManager.swift; sourceTree = "<group>"; };
+		4F53D6C022E877C1000FEE5C /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
+		4F53D6C322E8780B000FEE5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4F53D6C822E8830F000FEE5C /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		4F8C58C422E5D96300556012 /* Mezu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mezu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8C58C722E5D96300556012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F8C58CE22E5D96400556012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +144,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F53D68C22E70E94000FEE5C /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				4F53D68D22E70E94000FEE5C /* ParserProtocol.swift */,
+				4F53D68E22E70E94000FEE5C /* JSONDataParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		4F53D68F22E70E94000FEE5C /* Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				4F53D69022E70E94000FEE5C /* FetcherProtocol.swift */,
+				4F53D69122E70E94000FEE5C /* APIFetcher.swift */,
+			);
+			path = Fetcher;
+			sourceTree = "<group>";
+		};
+		4F53D69222E70E94000FEE5C /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				4F53D69422E70E94000FEE5C /* ResponseProtocol.swift */,
+				4F53D69822E70E94000FEE5C /* FLResponsePeopleList.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		4F53D69A22E70E94000FEE5C /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				4F53D69C22E70E94000FEE5C /* FLRequestFindByUserName.swift */,
+				4F53D69D22E70E94000FEE5C /* RequestProtocol.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		4F53D6B922E876FC000FEE5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F53D6BA22E87709000FEE5C /* LoaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4F53D6BE22E877A7000FEE5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F8C592022E5DF1500556012 /* InitialViewController.swift */,
+				4F53D6B522E86BEA000FEE5C /* InitialViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4F53D6BF22E877B3000FEE5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4F53D6C022E877C1000FEE5C /* InitialViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4F53D6C522E87850000FEE5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F53D6C822E8830F000FEE5C /* AppData.swift */,
+				4F53D6C322E8780B000FEE5C /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4F8C58BB22E5D96300556012 = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +279,8 @@
 		4F8C58F722E5DC2F00556012 /* Initial */ = {
 			isa = PBXGroup;
 			children = (
-				4F8C592022E5DF1500556012 /* InitialViewController.swift */,
+				4F53D6BE22E877A7000FEE5C /* Controller */,
+				4F53D6BF22E877B3000FEE5C /* ViewModel */,
 			);
 			path = Initial;
 			sourceTree = "<group>";
@@ -179,7 +288,9 @@
 		4F8C58F822E5DC3B00556012 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4F53D6C522E87850000FEE5C /* Model */,
 				4F8C591722E5DDAC00556012 /* Controller */,
+				4F53D6B922E876FC000FEE5C /* View */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -198,6 +309,9 @@
 		4F8C58FA22E5DC5A00556012 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				4F53D6AF22E70EC3000FEE5C /* APIOperation.swift */,
+				4F53D6B122E85EAE000FEE5C /* Configuration.swift */,
+				4F53D6B322E86988000FEE5C /* ServiceError.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -205,6 +319,11 @@
 		4F8C58FB22E5DC5E00556012 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4F53D68F22E70E94000FEE5C /* Fetcher */,
+				4F53D68C22E70E94000FEE5C /* Parser */,
+				4F53D69A22E70E94000FEE5C /* Request */,
+				4F53D69222E70E94000FEE5C /* Response */,
+				4F53D68B22E70E94000FEE5C /* SequenceRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -241,6 +360,7 @@
 				4F8C591122E5DD9400556012 /* InitializationManager.swift */,
 				4F8C590F22E5DD9400556012 /* Router.swift */,
 				4F8C591222E5DD9400556012 /* ThemeManager.swift */,
+				4F53D6BC22E8773C000FEE5C /* LoaderManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -255,6 +375,7 @@
 				4F8C590422E5DD0800556012 /* UITableViewReusable+Extension.swift */,
 				4F8C590522E5DD0800556012 /* UIView+Initialization.swift */,
 				4F8C590622E5DD0900556012 /* UIWindows+Extensions.swift */,
+				4F53D6B722E8768C000FEE5C /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -376,6 +497,7 @@
 				4F8C58D222E5D96400556012 /* LaunchScreen.storyboard in Resources */,
 				4F8C592522E5DFDA00556012 /* Localizable.strings in Resources */,
 				4F8C58CF22E5D96400556012 /* Assets.xcassets in Resources */,
+				4F53D6B622E86BEA000FEE5C /* InitialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,13 +522,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F53D6B422E86988000FEE5C /* ServiceError.swift in Sources */,
+				4F53D6B022E70EC3000FEE5C /* APIOperation.swift in Sources */,
 				4F8C591B22E5DDB400556012 /* ViewController.swift in Sources */,
 				4F8C590922E5DD0900556012 /* String+Extensions.swift in Sources */,
+				4F53D6BD22E8773C000FEE5C /* LoaderManager.swift in Sources */,
+				4F53D6A322E70E94000FEE5C /* APIFetcher.swift in Sources */,
 				4F8C591522E5DD9400556012 /* InitializationManager.swift in Sources */,
+				4F53D6AD22E70E94000FEE5C /* RequestProtocol.swift in Sources */,
+				4F53D6B822E8768C000FEE5C /* UITextField+Extensions.swift in Sources */,
 				4F8C590D22E5DD0900556012 /* UIWindows+Extensions.swift in Sources */,
+				4F53D6AC22E70E94000FEE5C /* FLRequestFindByUserName.swift in Sources */,
 				4F8C591322E5DD9400556012 /* Router.swift in Sources */,
 				4F8C591A22E5DDB400556012 /* AlertController.swift in Sources */,
+				4F53D6C422E8780B000FEE5C /* User.swift in Sources */,
+				4F53D6B222E85EAE000FEE5C /* Configuration.swift in Sources */,
 				4F8C590C22E5DD0900556012 /* UIView+Initialization.swift in Sources */,
+				4F53D6A922E70E94000FEE5C /* FLResponsePeopleList.swift in Sources */,
 				4F8C592122E5DF1500556012 /* InitialViewController.swift in Sources */,
 				4F8C591422E5DD9400556012 /* ErrorManager.swift in Sources */,
 				4F8C591D22E5DF0400556012 /* ListViewController.swift in Sources */,
@@ -414,10 +546,18 @@
 				4F8C590A22E5DD0900556012 /* UILabel+Extensions.swift in Sources */,
 				4F8C591F22E5DF0B00556012 /* DetailsViewController.swift in Sources */,
 				4F8C592322E5DF5100556012 /* NavigationController.swift in Sources */,
+				4F53D6A522E70E94000FEE5C /* ResponseProtocol.swift in Sources */,
 				4F8C590B22E5DD0900556012 /* UITableViewReusable+Extension.swift in Sources */,
 				4F8C590822E5DD0900556012 /* Dictionary+Networking.swift in Sources */,
 				4F8C590E22E5DD0900556012 /* UIColor+Extensions.swift in Sources */,
+				4F53D6A222E70E94000FEE5C /* FetcherProtocol.swift in Sources */,
 				4F8C58C822E5D96300556012 /* AppDelegate.swift in Sources */,
+				4F53D6C122E877C1000FEE5C /* InitialViewModel.swift in Sources */,
+				4F53D6A022E70E94000FEE5C /* ParserProtocol.swift in Sources */,
+				4F53D6BB22E87709000FEE5C /* LoaderView.swift in Sources */,
+				4F53D69F22E70E94000FEE5C /* SequenceRequest.swift in Sources */,
+				4F53D6A122E70E94000FEE5C /* JSONDataParser.swift in Sources */,
+				4F53D6C922E8830F000FEE5C /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
