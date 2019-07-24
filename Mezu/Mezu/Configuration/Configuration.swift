@@ -15,6 +15,9 @@ enum Configuration {
         static var baseUrl: String { return "https://www.flickr.com/services/rest" }
         static var apiKey: String { return "0e1ff6dbe99242bfdf44c80206eaa428" }
         static var responseFormat: String { return "json" }
+
+        static var listPageSize: Int = 50
+        static var listFirstPage: Int = 1
     }
 }
 

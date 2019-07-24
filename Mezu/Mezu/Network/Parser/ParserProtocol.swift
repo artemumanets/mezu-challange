@@ -2,7 +2,7 @@
 //  ParserProtocol.swift
 //  Mezu
 //
-//  Created by Artem Umanets on 05/07/2019.
+//  Created by Artem Umanets on 24/07/2019.
 //  Copyright © 2019 Artem Umanets. All rights reserved.
 //
 

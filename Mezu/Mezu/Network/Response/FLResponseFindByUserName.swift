@@ -16,4 +16,14 @@ struct FLResponseFindByUserName: ResponseProtocol {
 struct FLUser: ResponseProtocol {
 
     let nsid: String
+    let username: FLUserName
+}
+
+struct FLUserName: ResponseProtocol {
+
+    let name: String
+
+    enum CodingKeys: String, CodingKey {
+        case name = "_content"
+    }
 }

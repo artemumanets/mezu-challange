@@ -16,14 +16,14 @@ enum R {
         static let background = UIColor(hex: 0x2f2f2f)
         static let content = UIColor(hex: 0xf3f3f3)
         static let placeholder = Color.content.withAlphaComponent(0.5)
-        static let separator = UIColor(hex: 0x9e9e9e)
-        static let accent = UIColor(hex: 0xfed700)
+        static let noImage = UIColor(hex: 0xf3f3f3).withAlphaComponent(0.1)
+        static let accent = UIColor(hex: 0xff017e)
 
         enum Navigation {
             
-            static let background = UIColor(hex: 0xfed700)
-            static let content = UIColor(hex: 0x2f2f2f)
-            static let separator = UIColor(hex: 0xfed700)
+            static let background = UIColor(hex: 0x0f5fda)
+            static let content = UIColor(hex: 0xffffff)
+            static let separator = UIColor(hex: 0x07419a)
         }
     }
 
@@ -35,8 +35,12 @@ enum R {
         static let subcontent = UIFont(name: "Avenir-Light", size: 12.0)!
     }
 
-    enum Image {
-        static let favouriteEmpty = UIImage(named: "FavouriteEmpty")!
-        static let favouriteFilled = UIImage(named: "FavouriteFilled")!
+    enum Layout {
+
+        enum List {
+
+            static let space: CGFloat = 20.0
+            static let cornerRadius: CGFloat = 16.0
+        }
     }
 }

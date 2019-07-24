@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 typealias CallbackOnSuccess<T> = (T) -> ()
 typealias CallbackOnError = (Error) -> ()
 typealias CallbackFinally = () -> ()
+typealias CallbackOnImageDidLoad = (UIImage) -> ()
 
 protocol FetcherProtocol {
 
@@ -18,6 +20,8 @@ protocol FetcherProtocol {
                                     onSuccess: @escaping CallbackOnSuccess<T>,
                                     onError: @escaping CallbackOnError,
                                     onFinally: CallbackFinally?)
+
+    func fetchImageFrom(url: URL, onDidLoad: @escaping CallbackOnImageDidLoad) -> URLSessionDataTask?
 }
 
 extension FetcherProtocol {

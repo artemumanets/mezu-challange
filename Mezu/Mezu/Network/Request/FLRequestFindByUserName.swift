@@ -2,7 +2,7 @@
 //  FLRequestFindByUserName.swift
 //  Mezu
 //
-//  Created by Artem Umanets on 05/07/2019.
+//  Created by Artem Umanets on 24/07/2019.
 //  Copyright © 2019 Artem Umanets. All rights reserved.
 //
 
@@ -15,11 +15,11 @@ struct FLRequestFindByUserName: RequestProtocol {
     private let args: [String: Any]
 
     init(username: String) {
-        args = [Constant.argumentUsername: username]
+        args = [Argument.username: username]
     }
 }
 
-private enum Constant {
+private enum Argument {
 
-    static let argumentUsername = "username"
+    static let username = "username"
 }

@@ -28,11 +28,15 @@ class InitalViewModel: NSObject {
         viewController.infoLabel.set(color: R.Color.content, font: R.Font.content, text: "Initial.Info".localized)
 
         viewController.nameTextField.delegate = self
+        viewController.nameTextField.tintColor = R.Color.accent
         viewController.nameTextField.backgroundColor = R.Color.background
         viewController.nameTextField.set(placeholder: "Initial.Placeholder".localized,
                                          placeholderColor: R.Color.placeholder,
                                          textColor: R.Color.content,
-                                         borderColor: R.Color.separator)
+                                         borderColor: R.Color.accent)
+
+        // TODO: remove this
+        viewController.nameTextField.text = "eyetwist"
     }
 }
 

@@ -26,6 +26,12 @@ class InitialViewController: ViewController {
 
         viewModel.setupUI(viewController: self)
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        nameTextField.becomeFirstResponder()
+    }
 }
 
 extension InitialViewController: InitalViewModelDelegate {

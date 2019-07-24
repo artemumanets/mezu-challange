@@ -19,6 +19,7 @@ class LoaderView: UIView {
         let indicator = UIActivityIndicatorView(style: .whiteLarge)
         indicator.translatesAutoresizingMaskIntoConstraints = false
         indicator.isUserInteractionEnabled = false
+        indicator.color = R.Color.accent
         indicator.startAnimating()
         addSubview(indicator)
 

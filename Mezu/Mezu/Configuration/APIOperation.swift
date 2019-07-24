@@ -11,6 +11,8 @@ import Foundation
 enum APIOperation {
 
     case findByUserName([String: Any])
+    case getPublicPhotos([String: Any])
+    case getSizes([String: Any])
 
     var url: String {
         var operationUrl = "\(Configuration.Flickr.baseUrl)/"
@@ -19,11 +21,9 @@ enum APIOperation {
         operationUrl += "&nojsoncallback=1"
         operationUrl += "&format=\(Configuration.Flickr.responseFormat)"
 
-        switch self {
-        case .findByUserName(let args):
-            operationUrl += "&\(args.queryString)"
+        if action.queryString != "" {
+            operationUrl += "&\(action.queryString)"
         }
-
         return operationUrl
     }
 
@@ -33,7 +33,9 @@ enum APIOperation {
 
     private var action: APIAction {
         switch self {
-        case .findByUserName(_): return APIAction(method: .get, name: "flickr.people.findByUsername")
+        case .findByUserName(let args): return APIAction(method: .get, name: "flickr.people.findByUsername", queryString: args.queryString)
+        case .getPublicPhotos(let args): return APIAction(method: .get, name: "flickr.people.getPublicPhotos", queryString: args.queryString)
+        case .getSizes(let args): return APIAction(method: .get, name: "flickr.photos.getSizes", queryString: args.queryString)
         }
     }
 }
@@ -42,4 +44,5 @@ private struct APIAction {
 
     let method: RequestMethod
     let name: String
+    let queryString: String
 }

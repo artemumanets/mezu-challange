@@ -39,7 +39,7 @@ class SequenceRequest {
     }
     
     private func executeRequests(){
-        if requestStack.count > 0  &&  !hasError {
+        if requestStack.count > 0  && !hasError {
             numRequests += 1
             dispatchGroup.enter()
             requestStack.removeFirst()()
