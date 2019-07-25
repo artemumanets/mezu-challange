@@ -19,7 +19,7 @@ class DetailsViewModel {
     weak var delegate: DetailsViewModelDelegate?
     private let dataSource: FetcherProtocol
     private var photo: Photo
-    private var photoDetails: PhotoDetails?
+    private(set) var photoDetails = PhotoDetails.default
 
     init(photo: Photo, delegate: DetailsViewModelDelegate?, dataSource: FetcherProtocol = APIFetcher.default) {
         self.photo = photo
@@ -30,7 +30,7 @@ class DetailsViewModel {
     func setupUI(viewController vc: DetailsViewController) {
 
         vc.title = "Details.ScreenTitle".localized
-        
+
         vc.titleLabel.set(color: R.Color.content, font: R.Font.heading, text: "Details.Title".localized)
         vc.descriptionTitleLabel.set(color: R.Color.content, font: R.Font.heading, text: "Details.Description".localized)
         vc.tagsTitleLabel.set(color: R.Color.content, font: R.Font.heading, text: "Details.Tags".localized)
@@ -52,9 +52,6 @@ class DetailsViewModel {
     }
 
     func populateUI(viewController vc: DetailsViewController) {
-        guard let photoDetails = self.photoDetails else {
-            return
-        }
 
         vc.titleValueLabel.text = photoDetails.title.capitalizedFirstLetter
         vc.descriptionValueLabel.text = photoDetails.description.capitalizedFirstLetter
@@ -70,6 +67,10 @@ class DetailsViewModel {
         UIView.animate(withDuration: Animation.fast, animations: {
             vc.contentView.alpha = 1.0
         })
+    }
+
+    func populate(cell: TagCell, with tag: String) {
+        cell.tagNameLabel.text = tag
     }
 
     func fetchDetails() {

@@ -22,15 +22,9 @@ class ListViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = AppData.shared.user.name
-
+        viewModel.setupUI(viewController: self)
         collectionView.registerNib(for: PhotoPreviewCell.self)
-    }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        
         viewModel.fetchPhotos()
     }
 }

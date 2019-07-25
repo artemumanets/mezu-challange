@@ -42,6 +42,7 @@ class DetailsViewController: ViewController {
 
         viewModel.setupUI(viewController: self)
         viewModel.fetchDetails()
+        tagsCollectionView.registerNib(for: TagCell.self)
     }
 }
 
@@ -49,5 +50,32 @@ extension DetailsViewController: DetailsViewModelDelegate {
 
     func didFetchDetails() {
         viewModel.populateUI(viewController: self)
+        tagsCollectionView.reloadData()
+    }
+}
+
+extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.photoDetails.tags.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: TagCell = collectionView.dequeueReusableCell(for: indexPath)
+        let tag = viewModel.photoDetails.tags[indexPath.row]
+        viewModel.populate(cell: cell, with: tag)
+        return cell
+    }
+}
+
+
+extension DetailsViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let tag = viewModel.photoDetails.tags[indexPath.row]
+        var size = tag.size(withFont: R.Font.smallcontent)
+        size.width += 16.0
+        size.height += 16.0
+        return size
     }
 }

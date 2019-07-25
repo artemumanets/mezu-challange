@@ -27,9 +27,8 @@ class ListViewModel: NSObject {
         self.dataSource = dataSource
     }
 
-    func setupUI(viewController: ListViewController) {
-        
-
+    func setupUI(viewController vc: ListViewController) {
+        vc.title = AppData.shared.user.name
     }
 
     func populate(photoCell: PhotoPreviewCell, photo: Photo) {

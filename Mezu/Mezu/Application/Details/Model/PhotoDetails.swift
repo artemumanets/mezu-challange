@@ -25,6 +25,8 @@ struct PhotoDetails {
     let datePostedFormatted: String
     let dateUpdatedFormatted: String
 
+    static let `default` = PhotoDetails()
+
     init(photo: Photo, photoInfo: FLInfoPhoto, photoImage: UIImage) {
         self.title = photoInfo.title.value
         self.description = photoInfo.description.value
@@ -47,5 +49,18 @@ struct PhotoDetails {
 
         self.datePostedFormatted = dateFormatter.formattedString(from: dateTaken) ?? R.Layout.Formatting.emptyDate
         self.dateUpdatedFormatted = dateFormatter.formattedString(from: dateUpdated) ?? R.Layout.Formatting.emptyDate
+    }
+
+    private init() {
+        self.title = ""
+        self.description = ""
+        self.numberOfViews = 0
+        self.tags = [String]()
+        self.photo = UIImage()
+        self.photoSize = nil
+        self.dateTaken = nil
+        self.dateUpdated = nil
+        self.datePostedFormatted = ""
+        self.dateUpdatedFormatted = ""
     }
 }

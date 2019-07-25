@@ -35,6 +35,7 @@ enum R {
         static let content = UIFont(name: "Avenir-Medium", size: 16.0)!
         static let subheading = UIFont(name: "Avenir-Black", size: 13.0)!
         static let subcontent = UIFont(name: "Avenir-Light", size: 12.0)!
+        static let smallcontent = UIFont(name: "Avenir-Medium", size: 10.0)!
     }
 
     enum Layout {
