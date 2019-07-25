@@ -13,6 +13,7 @@ enum APIOperation {
     case findByUserName([String: Any])
     case getPublicPhotos([String: Any])
     case getSizes([String: Any])
+    case getInfo([String: Any])
 
     var url: String {
         var operationUrl = "\(Configuration.Flickr.baseUrl)/"
@@ -36,6 +37,7 @@ enum APIOperation {
         case .findByUserName(let args): return APIAction(method: .get, name: "flickr.people.findByUsername", queryString: args.queryString)
         case .getPublicPhotos(let args): return APIAction(method: .get, name: "flickr.people.getPublicPhotos", queryString: args.queryString)
         case .getSizes(let args): return APIAction(method: .get, name: "flickr.photos.getSizes", queryString: args.queryString)
+        case .getInfo(let args): return APIAction(method: .get, name: "flickr.photos.getInfo", queryString: args.queryString)
         }
     }
 }

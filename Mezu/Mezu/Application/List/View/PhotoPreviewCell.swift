@@ -27,7 +27,7 @@ class PhotoPreviewCell: UICollectionViewCell {
     func setupUI() {
         self.photoImageView.image = nil
         self.contentView.backgroundColor = R.Color.noImage
-        self.contentView.layer.cornerRadius = R.Layout.List.cornerRadius
+        self.contentView.layer.cornerRadius = R.Layout.cornerRadius
         self.contentView.layer.masksToBounds = true
         setSelected(state: false, animated: false)
     }

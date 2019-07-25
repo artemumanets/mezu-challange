@@ -70,7 +70,6 @@ extension ListViewModel {
             })
         }, onError: { error in
             LoaderManager.shared.hide()
-            print("error: \(error)")
             ErrorManager.show(error: error, retryCallback: {
                 self.fetchPhotos()
             })

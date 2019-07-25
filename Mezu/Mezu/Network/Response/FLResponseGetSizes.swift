@@ -30,11 +30,21 @@ struct FLSize: ResponseProtocol {
         do {
             let container = try decoder.container(keyedBy: CodingKeys.self)
 
-            label = (try? container.decode(String.self, forKey: .label)) ?? ""
-            source = (try? container.decode(String.self, forKey: .source)) ?? ""
-            media = (try? container.decode(String.self, forKey: .media)) ?? ""
-            width = Int((try? container.decode(String.self, forKey: .width)) ?? "") ?? 0
-            height = Int((try? container.decode(String.self, forKey: .height)) ?? "") ?? 0
+            label = try container.decode(String.self, forKey: .label)
+            source = try container.decode(String.self, forKey: .source)
+            media = try container.decode(String.self, forKey: .media)
+
+            if let width = (try? container.decode(String.self, forKey: .width)) {
+                self.width = Int(width) ?? 0
+            } else {
+                self.width = try container.decode(Int.self, forKey: .width)
+            }
+
+            if let height = (try? container.decode(String.self, forKey: .height)) {
+                self.height = Int(height) ?? 0
+            } else {
+                self.height = try container.decode(Int.self, forKey: .height)
+            }
         }
     }
 }

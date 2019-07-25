@@ -89,6 +89,7 @@ class APIFetcher: FetcherProtocol {
         }
     }
 
+    @discardableResult
     func fetchImageFrom(url: URL, onDidLoad: @escaping CallbackOnImageDidLoad) -> URLSessionDataTask? {
 //        if CacheManager.fileExists(atUrl: url) {
 //            DispatchQueue.global(qos: .background).async {

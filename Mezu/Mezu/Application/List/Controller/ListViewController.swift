@@ -13,7 +13,7 @@ class ListViewController: ViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    lazy var viewModel = ListViewModel(delegate: self)
+    private lazy var viewModel = ListViewModel(delegate: self)
 
     convenience init() {
         self.init(type: ListViewController.self)
@@ -50,7 +50,8 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        Router.push(from: self, to: .details)
+        let selectedPhoto = viewModel.photos[indexPath.row]
+        Router.push(from: self, to: .details(selectedPhoto))
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
@@ -58,26 +59,19 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
 extension ListViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: R.Layout.List.space, left: R.Layout.List.space, bottom: R.Layout.List.space, right: R.Layout.List.space)
+        return UIEdgeInsets(top: R.Layout.margin, left: R.Layout.margin, bottom: R.Layout.margin, right: R.Layout.margin)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return R.Layout.List.space
+        return R.Layout.margin
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let inset = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
-        let expectedWidth = UIScreen.main.bounds.width - inset.left - inset.right
-
-        guard let mediumSize = viewModel.photos[indexPath.row].mediumSize else {
-            return CGSize(width: expectedWidth, height: UIScreen.main.bounds.width * 0.65)
-        }
-
-        let expectedHeight = expectedWidth * mediumSize.size.height / mediumSize.size.width
-        return CGSize(width: expectedWidth, height: expectedHeight)
+        return R.Layout.Photo.newSize(for: viewModel.photos[indexPath.row].mediumSize?.size)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // TODO: Paginated loading
 //        if (scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height) {
 //            performRequest(query: searchBar.query, page: page)
 //        }

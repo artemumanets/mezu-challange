@@ -13,4 +13,8 @@ extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "")
     }
+
+    var capitalizedFirstLetter: String {
+        return prefix(1).capitalized + dropFirst()
+    }
 }

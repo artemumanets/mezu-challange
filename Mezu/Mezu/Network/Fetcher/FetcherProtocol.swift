@@ -21,6 +21,7 @@ protocol FetcherProtocol {
                                     onError: @escaping CallbackOnError,
                                     onFinally: CallbackFinally?)
 
+    @discardableResult
     func fetchImageFrom(url: URL, onDidLoad: @escaping CallbackOnImageDidLoad) -> URLSessionDataTask?
 }
 

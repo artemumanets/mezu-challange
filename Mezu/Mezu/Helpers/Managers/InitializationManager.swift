@@ -19,7 +19,7 @@ class InitializationManager {
     private static func configureUI() {
         UINavigationBar.appearance().barTintColor = R.Color.Navigation.background
         UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().titleTextAttributes = [.font: R.Font.title, .foregroundColor: R.Color.Navigation.content]
+        UINavigationBar.appearance().titleTextAttributes = [.font: R.Font.heading, .foregroundColor: R.Color.Navigation.content]
         UINavigationBar.appearance().shadowImage = R.Color.Navigation.separator.toImage(withSize: CGSize(width: 1.0, height: 1.0))
         UIBarButtonItem.appearance().tintColor = R.Color.Navigation.content
     }

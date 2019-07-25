@@ -13,7 +13,7 @@ enum Configuration {
     enum Flickr {
         
         static var baseUrl: String { return "https://www.flickr.com/services/rest" }
-        static var apiKey: String { return "0e1ff6dbe99242bfdf44c80206eaa428" }
+        static var apiKey: String { return "f9cc014fa76b098f9e82f1c288379ea1" }
         static var responseFormat: String { return "json" }
 
         static var listPageSize: Int = 50

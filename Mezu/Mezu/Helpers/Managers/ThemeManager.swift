@@ -15,9 +15,11 @@ enum R {
 
         static let background = UIColor(hex: 0x2f2f2f)
         static let content = UIColor(hex: 0xf3f3f3)
+        static let accent = UIColor(hex: 0xff017e)
+
+        static let subcontent = UIColor(hex: 0xdfdfdf)
         static let placeholder = Color.content.withAlphaComponent(0.5)
         static let noImage = UIColor(hex: 0xf3f3f3).withAlphaComponent(0.1)
-        static let accent = UIColor(hex: 0xff017e)
 
         enum Navigation {
             
@@ -29,18 +31,29 @@ enum R {
 
     enum Font {
 
-        static let heading = UIFont(name: "Avenir-Black", size: 22.0)!
-        static let title = UIFont(name: "Futura-Medium", size: 18.0)!
+        static let heading = UIFont(name: "Avenir-Black", size: 20.0)!
         static let content = UIFont(name: "Avenir-Medium", size: 16.0)!
+        static let subheading = UIFont(name: "Avenir-Black", size: 13.0)!
         static let subcontent = UIFont(name: "Avenir-Light", size: 12.0)!
     }
 
     enum Layout {
 
-        enum List {
+        static let margin: CGFloat = 20.0
+        static let cornerRadius: CGFloat = 16.0
 
-            static let space: CGFloat = 20.0
-            static let cornerRadius: CGFloat = 16.0
+        enum Photo {
+
+            static func newSize(for photoSize: CGSize?) -> CGSize {
+
+                let expectedWidth = UIScreen.main.bounds.width - Layout.margin * 2.0
+                guard let size = photoSize else {
+                    return CGSize(width: expectedWidth, height: UIScreen.main.bounds.width * 0.65)
+                }
+
+                let expectedHeight = expectedWidth * size.height / size.width
+                return CGSize(width: expectedWidth, height: expectedHeight)
+            }
         }
     }
 }

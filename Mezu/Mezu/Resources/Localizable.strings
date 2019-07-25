@@ -15,6 +15,13 @@
 "Initial.Info" = "Welcome!\nList photos from Flickr by user name.";
 "Initial.Placeholder" = "Username";
 
+/* Details */
+"Details.Title" = "Title";
+"Details.Description" = "Description";
+"Details.NumViews" = "Views";
+"Details.DateTaken" = "Date Taken";
+"Details.DateUpdated" = "Date Updated";
+"Details.Tags" = "Tags";
 
 /* Errors */
 "Error.Title" = "Error";
