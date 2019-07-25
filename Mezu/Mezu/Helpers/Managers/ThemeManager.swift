@@ -55,5 +55,10 @@ enum R {
                 return CGSize(width: expectedWidth, height: expectedHeight)
             }
         }
+
+        enum Formatting {
+
+            static let emptyDate: String = "Global.NotAvailable".localized
+        }
     }
 }

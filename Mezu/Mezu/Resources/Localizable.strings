@@ -10,12 +10,14 @@
 "Global.Ok" = "Ok";
 "Global.Continue" = "Continue";
 "Global.Retry" = "Retry";
+"Global.NotAvailable" = "N/A";
 
 /* Inital */
 "Initial.Info" = "Welcome!\nList photos from Flickr by user name.";
 "Initial.Placeholder" = "Username";
 
 /* Details */
+"Details.ScreenTitle" = "Details";
 "Details.Title" = "Title";
 "Details.Description" = "Description";
 "Details.NumViews" = "Views";

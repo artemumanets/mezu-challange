@@ -11,23 +11,41 @@ import UIKit
 
 struct PhotoDetails {
 
+    private let dateTaken: Date?
+    private let dateUpdated: Date?
+    private let dateFormatter = DateFormatter(dateStyle: .medium)
+
     let title: String
     let description: String
-    let dateTaken: Date
-    let dateUpdated: Date
     let numberOfViews: Int
     let tags: [String]
     let photo: UIImage
     let photoSize: PhotoSize?
 
+    let datePostedFormatted: String
+    let dateUpdatedFormatted: String
+
     init(photo: Photo, photoInfo: FLInfoPhoto, photoImage: UIImage) {
         self.title = photoInfo.title.value
         self.description = photoInfo.description.value
-        self.dateTaken = Date()
-        self.dateUpdated = Date()
         self.numberOfViews = Int(photoInfo.views) ?? 0
         self.tags = photoInfo.tags.tag.map { $0.raw }
         self.photo = photoImage
         self.photoSize = photo.largeSize ?? photo.mediumSize
+
+        if let postedTimestamp = Double(photoInfo.dates.posted) {
+            self.dateTaken = Date(timeIntervalSince1970: postedTimestamp)
+        } else {
+            self.dateTaken = nil
+        }
+
+        if let updatedTimestamp = Double(photoInfo.dates.lastupdate) {
+            self.dateUpdated = Date(timeIntervalSince1970: updatedTimestamp)
+        } else {
+            self.dateUpdated = nil
+        }
+
+        self.datePostedFormatted = dateFormatter.formattedString(from: dateTaken) ?? R.Layout.Formatting.emptyDate
+        self.dateUpdatedFormatted = dateFormatter.formattedString(from: dateUpdated) ?? R.Layout.Formatting.emptyDate
     }
 }
