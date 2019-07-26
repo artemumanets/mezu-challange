@@ -11,8 +11,9 @@ import UIKit
 
 class ListViewController: ViewController {
 
-    @IBOutlet private weak var collectionView: UICollectionView!
-    private lazy var closeButton = UIBarButtonItem(image: R.Image.buttonClose, style: .plain, target: self, action: #selector(closeButtonTapped))
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var noContentLabel: UILabel!
+    lazy var closeButton = UIBarButtonItem(image: R.Image.buttonClose, style: .plain, target: self, action: #selector(closeButtonTapped))
 
     private lazy var viewModel = ListViewModel(delegate: self)
 
@@ -28,7 +29,6 @@ class ListViewController: ViewController {
         super.viewDidLoad()
 
         viewModel.setupUI(viewController: self)
-        navigationItem.rightBarButtonItem = closeButton
 
         collectionView.registerNib(for: PhotoPreviewCell.self)
         viewModel.fetchPhotos()
@@ -92,5 +92,6 @@ extension ListViewController: ListViewModelDelegate {
     func didUpdatePhotos() {
         collectionView.reloadData()
         collectionView.collectionViewLayout.invalidateLayout()
+        viewModel.updateUI(viewController: self)
     }
 }

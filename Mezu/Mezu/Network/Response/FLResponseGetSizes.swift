@@ -22,7 +22,6 @@ struct FLSize: ResponseProtocol {
 
     let label: String
     let source: String
-    let media: String
     let width: Int
     let height: Int
 
@@ -32,7 +31,6 @@ struct FLSize: ResponseProtocol {
 
             label = try container.decode(String.self, forKey: .label)
             source = try container.decode(String.self, forKey: .source)
-            media = try container.decode(String.self, forKey: .media)
 
             if let width = (try? container.decode(String.self, forKey: .width)) {
                 self.width = Int(width) ?? 0

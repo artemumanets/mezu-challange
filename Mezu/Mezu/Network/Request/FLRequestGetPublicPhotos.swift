@@ -17,7 +17,8 @@ struct FLRequestGetPublicPhotos: RequestProtocol {
     init(userId: String, perPage: Int, page: Int) {
         args = [Argument.userId: userId,
                 Argument.perPage: perPage,
-                Argument.page: page]
+                Argument.page: page,
+                Argument.extras: Argument.mediaValue]
     }
 }
 
@@ -26,4 +27,6 @@ private enum Argument {
     static let userId = "user_id"
     static let perPage = "per_page"
     static let page = "page"
+    static let extras = "extras"
+    static let mediaValue = "media"
 }

@@ -25,9 +25,22 @@
 "Details.DateUpdated" = "Date Updated";
 "Details.Tags" = "Tags";
 
+/* Info */
+
+"Info.Title" = "Info";
+"Info.ChallangeInfo" = "Mezu iOS Developer Challange";
+"Info.DeveloperName" = "Artem Umanets";
+"Info.DeveloperDescription" = "I am a software engineer with more than 7 years of experience in iOS development.I love to learn and improve my knowledge regarding programming. When I see space for improvement,I always try to improve until I achieve the desired result.\n\nDuring my free time I work on personal projects: apps and games.I love to bring ideas to life and being involved in all stages: Prototyping, Design of UI and UX, development, testing, and deployment.";
+"Info.ThankYou" = "Thank you for your time.";
+
 /* Errors */
 "Error.Title" = "Error";
 "Error.APIInvalidURL" = "Could not communicate with the server.";
 "Error.APIGeneric" = "There was a problem communicating with the server.";
 "Error.APIHTTPStatusCode" = "The server responded with status code:";
 "Error.NetworkGeneric" = "An error occured performing your request. Please try again later.";
+
+"Error.Initial.InvalidUsername" = "The provided username is invalid.";
+"Error.Initial.EmptyUsername" = "The provided username can't be empty.";
+
+"Error.List.NoPhotosToShow" = "Current user doesn't has any photos.";

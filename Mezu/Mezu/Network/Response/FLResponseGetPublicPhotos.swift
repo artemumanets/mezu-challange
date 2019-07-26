@@ -24,4 +24,5 @@ struct FLPhoto: ResponseProtocol {
 
     let id: String
     let title: String
+    let media: String
 }

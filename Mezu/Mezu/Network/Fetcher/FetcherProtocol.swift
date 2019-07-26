@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 
 typealias CallbackOnSuccess<T> = (T) -> ()
-typealias CallbackOnError = (Error) -> ()
+typealias CallbackOnError<E: ResponseProtocol> = (ServiceError<E>) -> ()
 typealias CallbackFinally = () -> ()
 typealias CallbackOnImageDidLoad = (UIImage) -> ()
 
 protocol FetcherProtocol {
 
-    func fetch<T: ResponseProtocol>(request: RequestProtocol,
+    func fetch<T: ResponseProtocol, E: ResponseProtocol>(request: RequestProtocol,
                                     onSuccess: @escaping CallbackOnSuccess<T>,
-                                    onError: @escaping CallbackOnError,
+                                    onError: @escaping CallbackOnError<E>,
                                     onFinally: CallbackFinally?)
 
     @discardableResult
@@ -27,9 +27,9 @@ protocol FetcherProtocol {
 
 extension FetcherProtocol {
 
-    func fetch<T: ResponseProtocol>(request: RequestProtocol,
+    func fetch<T: ResponseProtocol, E: ResponseProtocol>(request: RequestProtocol,
                                     onSuccess: @escaping CallbackOnSuccess<T>,
-                                    onError: @escaping CallbackOnError) {
+                                    onError: @escaping CallbackOnError<E>) {
         
         fetch(request: request, onSuccess: onSuccess, onError: onError, onFinally: nil)
     }

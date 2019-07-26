@@ -89,7 +89,9 @@ class DetailsViewModel {
                 self?.dataSource.fetch(request: FLRequestGetInfo(photoId: photo.id), onSuccess: { (response: FLResponseGetInfo) in
                     photoInfo = response.photo
                     sequenceRequest.success()
-                }, onError: { _ in sequenceRequest.fail() })
+                }, onError: { (error: ServiceError<FLResponseError>) in
+                    sequenceRequest.fail()
+                })
             }.request { [weak self] in
                 guard let url = photo.largeSize?.url else {
                     sequenceRequest.fail()

@@ -19,11 +19,12 @@ class APIFetcher: FetcherProtocol {
         self.dataParser = dataParser
     }
 
-    func fetch<T: ResponseProtocol>(request: RequestProtocol,
+    func fetch<T: ResponseProtocol, E: ResponseProtocol>(request: RequestProtocol,
                                     onSuccess: @escaping CallbackOnSuccess<T>,
-                                    onError: @escaping CallbackOnError,
+                                    onError: @escaping CallbackOnError<E>,
                                     onFinally: CallbackFinally?) {
-        let wrappedError: CallbackOnError = { error in
+        
+        let wrappedError: CallbackOnError = { (error: ServiceError<E>) in
             DispatchQueue.main.async {
                 onError(error)
                 onFinally?()
@@ -42,18 +43,22 @@ class APIFetcher: FetcherProtocol {
                 let object: T = try self.dataParser.parse(data: data)
                 wrappedSuccess(object)
             } catch _ {
-                wrappedError(ServiceError.unexpectedAPIResponse)
+                if let apiError: E = try? self.dataParser.parse(data: data) {
+                    wrappedError(ServiceError.apiError(apiError))
+                } else {
+                    wrappedError(ServiceError.unexpectedAPIResponse)
+                }
             }
         }
 
         make(request: request, onSuccess: { data in
             parseData(data)
-        }) { error in
+        }) { (error: ServiceError<E>) in
             wrappedError(error)
         }
     }
 
-    private func make(request: RequestProtocol, onSuccess: @escaping CallbackOnSuccess<Data>, onError: @escaping CallbackOnError) {
+    private func make<E: ResponseProtocol>(request: RequestProtocol, onSuccess: @escaping CallbackOnSuccess<Data>, onError: @escaping CallbackOnError<E>) {
 
         guard let url = URL(string: request.operation.url) else {
             onError(ServiceError.invalidAPIUrl)
@@ -70,7 +75,7 @@ class APIFetcher: FetcherProtocol {
             let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
 
                 if let error = error {
-                    onError(error)
+                    onError(.error(error))
                 }
                 guard let data = data else {
                     onError(ServiceError.unexpectedAPIResponse)
