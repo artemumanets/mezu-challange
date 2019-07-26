@@ -38,14 +38,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-fF-MaR">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-fF-MaR">
                     <rect key="frame" x="186" y="254.5" width="42" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="S8E-iP-NzY"/>
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="Yu5-JK-Xqh"/>
                     </connections>
@@ -80,6 +80,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rq5-Kg-osM" secondAttribute="trailing" constant="10" id="0nl-v0-VZM"/>
                 <constraint firstItem="nT4-G1-NlH" firstAttribute="top" secondItem="7mI-kP-Qmz" secondAttribute="bottom" constant="20" id="1xi-a8-ahh"/>
@@ -96,8 +97,16 @@
                 <constraint firstItem="AdT-fF-MaR" firstAttribute="width" secondItem="nT4-G1-NlH" secondAttribute="width" id="whk-79-joE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="jF6-h6-6PU" appends="YES" id="kyV-lE-pnc"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </view>
+        <tapGestureRecognizer id="jF6-h6-6PU">
+            <connections>
+                <action selector="viewTapped:" destination="-1" id="EhU-Mz-38c"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="ButtonInfo" width="44" height="44"/>

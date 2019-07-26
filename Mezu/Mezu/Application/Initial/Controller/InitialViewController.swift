@@ -38,6 +38,10 @@ class InitialViewController: ViewController {
     @IBAction func infoButtonTapped() {
         Router.modal(from: self, to: .info)
     }
+
+    @IBAction func viewTapped(_ sender: Any) {
+        nameTextField.resignFirstResponder()
+    }
 }
 
 extension InitialViewController: UITextFieldDelegate {
