@@ -95,6 +95,13 @@ extension ListViewModel {
             }
         })
         sequenceRequest.waitAll(onSuccess: {
+            // Re-sort photos to the same order that was returned by the API
+            newPhotos = newPhotos.sorted(by: { (photo1, photo2) -> Bool in
+                guard let idx1 = (photos.firstIndex { $0.id == photo1.id }), let idx2 = (photos.firstIndex { $0.id == photo2.id }) else {
+                    return false
+                }
+                return idx1 < idx2
+            })
             onSuccess(newPhotos)
             onFinally()
         }, onError: {
