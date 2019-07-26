@@ -20,6 +20,7 @@ class ListViewModel: NSObject {
     private let dataSource: FetcherProtocol
 
     private var page = Configuration.Flickr.listFirstPage
+    private var hasPages = true
     var photos = [Photo]()
 
     init(delegate: ListViewModelDelegate?, dataSource: FetcherProtocol = APIFetcher.default) {
@@ -61,7 +62,7 @@ extension ListViewModel {
 
     func fetchPhotos() {
 
-        guard LoaderManager.shared.isLoading == false else {
+        guard hasPages && LoaderManager.shared.isLoading == false else {
             return
         }
 
@@ -73,6 +74,7 @@ extension ListViewModel {
             self.fetchSizes(for: photos, onSuccess: { (newPhotos) in
                 self.page += 1
                 self.photos += newPhotos
+                self.hasPages = self.page <= response.photos.pages 
                 self.delegate?.didUpdatePhotos()
             }, onError: {
                 ErrorManager.show(description: "Error.NetworkGeneric".localized)

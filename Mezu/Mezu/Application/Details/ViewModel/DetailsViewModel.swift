@@ -63,6 +63,9 @@ class DetailsViewModel {
         vc.photoImageView.image = photoDetails.photo
         vc.photoWidthConstraint.constant = photoSize.width
         vc.photoHeightConstraint.constant = photoSize.height
+
+        vc.tagsTitleLabel.isHidden = photoDetails.tags.count == 0
+        vc.tagsCollectionView.isHidden = photoDetails.tags.count == 0
         
         UIView.animate(withDuration: Animation.fast, animations: {
             vc.contentView.alpha = 1.0

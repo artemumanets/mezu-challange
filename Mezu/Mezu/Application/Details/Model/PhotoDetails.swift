@@ -35,13 +35,13 @@ struct PhotoDetails {
         self.photo = photoImage
         self.photoSize = photo.largeSize ?? photo.mediumSize
 
-        if let postedTimestamp = Double(photoInfo.dates.posted) {
+        if let postedTimestamp = Double(photoInfo.dates.posted), postedTimestamp != 0.0 {
             self.dateTaken = Date(timeIntervalSince1970: postedTimestamp)
         } else {
             self.dateTaken = nil
         }
 
-        if let updatedTimestamp = Double(photoInfo.dates.lastupdate) {
+        if let updatedTimestamp = Double(photoInfo.dates.lastupdate), updatedTimestamp != 0.0 {
             self.dateUpdated = Date(timeIntervalSince1970: updatedTimestamp)
         } else {
             self.dateUpdated = nil

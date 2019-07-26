@@ -30,14 +30,14 @@ struct Photo {
         self.id = photo.id
         self.title = photo.title
 
-        if let mediumSize = (sizes?.first { $0.label == FLSizeLabel.medium640.rawValue }) ?? sizes?.first,
+        if let mediumSize = (sizes?.first { $0.label == FLSizeLabel.medium640.rawValue }) ?? sizes?.last,
             let mediumUrl = URL(string: mediumSize.source) {
             self.mediumSize = PhotoSize(url: mediumUrl, width: mediumSize.width, height: mediumSize.height)
         } else {
             self.mediumSize = nil
         }
 
-        if let largeSize = (sizes?.first { $0.label == FLSizeLabel.large1600.rawValue }) ?? sizes?.first,
+        if let largeSize = (sizes?.first { $0.label == FLSizeLabel.large1600.rawValue }) ?? sizes?.last,
             let largeUrl = URL(string: largeSize.source) {
             self.largeSize = PhotoSize(url: largeUrl, width: largeSize.width, height: largeSize.height)
         } else {
