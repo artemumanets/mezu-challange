@@ -11,7 +11,8 @@ import UIKit
 
 class ListViewController: ViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    private lazy var closeButton = UIBarButtonItem(image: R.Image.buttonClose, style: .plain, target: self, action: #selector(closeButtonTapped))
 
     private lazy var viewModel = ListViewModel(delegate: self)
 
@@ -19,13 +20,28 @@ class ListViewController: ViewController {
         self.init(type: ListViewController.self)
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         viewModel.setupUI(viewController: self)
-        collectionView.registerNib(for: PhotoPreviewCell.self)
+        navigationItem.rightBarButtonItem = closeButton
 
+        collectionView.registerNib(for: PhotoPreviewCell.self)
         viewModel.fetchPhotos()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+    }
+
+    @objc func closeButtonTapped() {
+        self.dismiss(animated: true)
+    }
+
+    @objc func appDidEnterBackground() {
+        self.dismiss(animated: false)
     }
 }
 
