@@ -81,10 +81,9 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // TODO: Paginated loading
-//        if (scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height) {
-//            performRequest(query: searchBar.query, page: page)
-//        }
+        if (scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height) {
+            viewModel.fetchPhotos()
+        }
     }
 }
 
