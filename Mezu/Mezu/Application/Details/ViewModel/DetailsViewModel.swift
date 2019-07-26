@@ -107,7 +107,12 @@ class DetailsViewModel {
             }.waitAll(onSuccess: { [weak self] in
                 self?.photoDetails = PhotoDetails(photo: photo, photoInfo: photoInfo, photoImage: photoImage)
                 self?.delegate?.didFetchDetails()
-            }, onError: { ErrorManager.show(description: "Error.NetworkGeneric".localized) })
+            }, onError: {
+
+                ErrorManager.show(description: "Error.NetworkGeneric".localized, retryCallback: {
+                    self.fetchDetails()
+                })
+            })
             .after { LoaderManager.shared.hide() }
     }
 }

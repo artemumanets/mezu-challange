@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class ErrorManager {
+
+    static var alertIsVisible: Bool {
+        return UIApplication.shared.keyWindow?.visibleViewController is AlertController
+    }
 
     private init() {}
     

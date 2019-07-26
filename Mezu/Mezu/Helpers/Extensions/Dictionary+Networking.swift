@@ -11,12 +11,16 @@ import Foundation
 extension Dictionary {
 
     var queryString: String {
-        
-        var output: String = ""
+
+        var queryStringArgs = [String]()
         for (key,value) in self {
             if let v = value as? String, v == "" { continue }
-            output +=  "\(key)=\(value)&"
+            queryStringArgs.append("\(key)=\(value)")
         }
+        queryStringArgs.sort()
+        var output: String = ""
+        queryStringArgs.forEach { output += "\($0)&" }
+
         output = String(output.dropLast())
         output = output.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         return output

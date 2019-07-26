@@ -79,6 +79,7 @@ class APIFetcher: FetcherProtocol {
 
                 if let error = error {
                     onError(.error(error))
+                    return
                 }
                 guard let data = data else {
                     onError(ServiceError.unexpectedAPIResponse)
@@ -86,6 +87,7 @@ class APIFetcher: FetcherProtocol {
                 }
                 if let httpStatusCode = (response as? HTTPURLResponse)?.statusCode, httpStatusCode != 200 {
                     onError(ServiceError.httpError(httpStatusCode))
+                    return
                 }
                 if request.cacheResponse && !CacheManager.fileExists(atUrl: url) {
                     CacheManager.write(data: data, toUrl: url)

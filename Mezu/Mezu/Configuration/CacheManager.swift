@@ -51,6 +51,7 @@ class CacheManager {
         let identifier = url.absoluteString
             .replacingOccurrences(of: "/", with: CacheManager.delimiter)
             .replacingOccurrences(of: ":", with: CacheManager.delimiter)
+            .replacingOccurrences(of: "@", with: CacheManager.delimiter)
         var path = URL(fileURLWithPath: NSTemporaryDirectory())
         path.appendPathComponent(identifier)
         return path

@@ -62,7 +62,7 @@ extension ListViewModel {
 
     func fetchPhotos() {
 
-        guard hasPages && LoaderManager.shared.isLoading == false else {
+        guard hasPages && LoaderManager.shared.isLoading == false && ErrorManager.alertIsVisible == false else {
             return
         }
 

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 typealias AlertRetryCallback = () -> ()
+
 class AlertController: UIAlertController {
     
     func show() {
