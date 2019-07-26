@@ -71,6 +71,14 @@ extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataS
 
 extension DetailsViewController: UICollectionViewDelegateFlowLayout {
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return R.Layout.Details.tagSpace
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return R.Layout.Details.tagSpace
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let tag = viewModel.photoDetails.tags[indexPath.row]
         var size = tag.size(withFont: R.Font.smallcontent)

@@ -17,7 +17,7 @@ struct PhotoDetails {
 
     let title: String
     let description: String
-    let numberOfViews: Int
+    let numberOfViews: String
     let tags: [String]
     let photo: UIImage
     let photoSize: PhotoSize?
@@ -28,10 +28,10 @@ struct PhotoDetails {
     static let `default` = PhotoDetails()
 
     init(photo: Photo, photoInfo: FLInfoPhoto, photoImage: UIImage) {
-        self.title = photoInfo.title.value
-        self.description = photoInfo.description.value
-        self.numberOfViews = Int(photoInfo.views) ?? 0
-        self.tags = photoInfo.tags.tag.map { $0.raw }
+        self.title = photoInfo.title.value.count == 0 ? R.Layout.Formatting.emptyString : photoInfo.title.value
+        self.description = photoInfo.description.value.count == 0 ? R.Layout.Formatting.emptyString : photoInfo.description.value
+        self.numberOfViews = photoInfo.views.count == 0 ? R.Layout.Formatting.emptyString : photoInfo.views
+        self.tags = photoInfo.tags.tag.map { $0.raw }.sorted { $0.count < $1.count }
         self.photo = photoImage
         self.photoSize = photo.largeSize ?? photo.mediumSize
 
@@ -54,7 +54,7 @@ struct PhotoDetails {
     private init() {
         self.title = ""
         self.description = ""
-        self.numberOfViews = 0
+        self.numberOfViews = ""
         self.tags = [String]()
         self.photo = UIImage()
         self.photoSize = nil

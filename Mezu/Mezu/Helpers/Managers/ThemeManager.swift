@@ -38,6 +38,11 @@ enum R {
         static let smallcontent = UIFont(name: "Avenir-Medium", size: 10.0)!
     }
 
+    enum Image {
+
+        static let buttonClose = UIImage(named: "ButtonClose")!
+    }
+
     enum Layout {
 
         static let margin: CGFloat = 20.0
@@ -57,8 +62,13 @@ enum R {
             }
         }
 
+        enum Details {
+            static let tagSpace: CGFloat = 4.0
+        }
+
         enum Formatting {
 
+            static let emptyString: String = "Global.NotAvailable".localized
             static let emptyDate: String = "Global.NotAvailable".localized
         }
     }

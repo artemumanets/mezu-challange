@@ -245,9 +245,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="o9u-UK-K0h">
-                                            <rect key="frame" x="0.0" y="480" width="414" height="372"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="o9u-UK-K0h" customClass="IntrinsicSizeCollectionView" customModule="Mezu" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="480" width="374" height="372"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="372" placeholder="YES" id="szv-D2-BvG"/>
+                                            </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EKH-HS-eAU">
                                                 <size key="itemSize" width="50" height="50"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -264,12 +267,12 @@
                                     <constraints>
                                         <constraint firstItem="uzm-Rf-Rwn" firstAttribute="top" secondItem="522-So-ped" secondAttribute="bottom" constant="16" id="3BT-2m-PG0"/>
                                         <constraint firstAttribute="bottom" secondItem="o9u-UK-K0h" secondAttribute="bottom" id="B6U-yC-lwX"/>
-                                        <constraint firstItem="o9u-UK-K0h" firstAttribute="leading" secondItem="f7V-im-yaD" secondAttribute="leading" id="PQl-Gg-wBr"/>
+                                        <constraint firstItem="o9u-UK-K0h" firstAttribute="leading" secondItem="f7V-im-yaD" secondAttribute="leading" constant="20" id="PQl-Gg-wBr"/>
                                         <constraint firstAttribute="trailing" secondItem="uzm-Rf-Rwn" secondAttribute="trailing" constant="20" id="Xtb-ae-EqB"/>
                                         <constraint firstItem="o9u-UK-K0h" firstAttribute="top" secondItem="1Mz-L8-7TY" secondAttribute="bottom" constant="16" id="YtD-O1-b4s"/>
                                         <constraint firstItem="522-So-ped" firstAttribute="top" secondItem="f7V-im-yaD" secondAttribute="top" constant="20" id="enA-xG-naj"/>
                                         <constraint firstItem="1Mz-L8-7TY" firstAttribute="top" secondItem="uzm-Rf-Rwn" secondAttribute="bottom" constant="20" id="etC-YR-Swy"/>
-                                        <constraint firstAttribute="trailing" secondItem="o9u-UK-K0h" secondAttribute="trailing" id="fui-AJ-1xZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="o9u-UK-K0h" secondAttribute="trailing" constant="20" id="fui-AJ-1xZ"/>
                                         <constraint firstItem="1Mz-L8-7TY" firstAttribute="leading" secondItem="f7V-im-yaD" secondAttribute="leading" constant="20" id="kth-Qm-b8h"/>
                                         <constraint firstItem="uzm-Rf-Rwn" firstAttribute="leading" secondItem="f7V-im-yaD" secondAttribute="leading" constant="20" id="qkV-rj-dQf"/>
                                         <constraint firstItem="522-So-ped" firstAttribute="centerX" secondItem="f7V-im-yaD" secondAttribute="centerX" id="tUl-wC-13V"/>
@@ -282,7 +285,6 @@
                                 <constraint firstItem="f7V-im-yaD" firstAttribute="leading" secondItem="dRu-pb-aeY" secondAttribute="leading" id="Hr6-H6-Cbp"/>
                                 <constraint firstItem="f7V-im-yaD" firstAttribute="width" secondItem="dRu-pb-aeY" secondAttribute="width" id="M5J-pp-Acx"/>
                                 <constraint firstAttribute="bottom" secondItem="f7V-im-yaD" secondAttribute="bottom" id="lgD-TT-qGb"/>
-                                <constraint firstItem="f7V-im-yaD" firstAttribute="height" secondItem="dRu-pb-aeY" secondAttribute="height" id="y98-o2-hDj"/>
                                 <constraint firstAttribute="trailing" secondItem="f7V-im-yaD" secondAttribute="trailing" id="zbr-zH-ykd"/>
                             </constraints>
                         </scrollView>

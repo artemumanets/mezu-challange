@@ -22,11 +22,11 @@ class TagCell: UICollectionViewCell {
     
     override func prepareForReuse() {
 
-        self.contentView.backgroundColor = UIColor.red
         self.tagNameLabel.text = ""
     }
 
     func setupUI() {
+        self.contentView.backgroundColor = UIColor.clear
         self.tagNameLabel.set(color: R.Color.content, font: R.Font.smallcontent)
         self.labelHolderView.backgroundColor = R.Color.accent
         self.labelHolderView.layer.cornerRadius = R.Layout.cornerRadius

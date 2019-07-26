@@ -57,7 +57,7 @@ class DetailsViewModel {
         vc.descriptionValueLabel.text = photoDetails.description.capitalizedFirstLetter
         vc.dateTakenValueLabel.text = photoDetails.datePostedFormatted
         vc.dateUpdatedValueLabel.text = photoDetails.dateUpdatedFormatted
-        vc.numViewsValueLabel.text = String(photoDetails.numberOfViews)
+        vc.numViewsValueLabel.text = photoDetails.numberOfViews
 
         let photoSize = R.Layout.Photo.newSize(for: photoDetails.photoSize?.size)
         vc.photoImageView.image = photoDetails.photo
