@@ -1,5 +1,5 @@
 //
-//  ThemeManager.swift
+//  Resources.swift
 //  Mezu
 //
 //  Created by Artem Umanets on 22/07/2019.

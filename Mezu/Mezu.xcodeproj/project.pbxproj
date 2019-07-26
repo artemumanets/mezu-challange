@@ -65,7 +65,7 @@
 		4F8C591322E5DD9400556012 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C590F22E5DD9400556012 /* Router.swift */; };
 		4F8C591422E5DD9400556012 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C591022E5DD9400556012 /* ErrorManager.swift */; };
 		4F8C591522E5DD9400556012 /* InitializationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C591122E5DD9400556012 /* InitializationManager.swift */; };
-		4F8C591622E5DD9400556012 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C591222E5DD9400556012 /* ThemeManager.swift */; };
+		4F8C591622E5DD9400556012 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C591222E5DD9400556012 /* Resources.swift */; };
 		4F8C591A22E5DDB400556012 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C591822E5DDB400556012 /* AlertController.swift */; };
 		4F8C591B22E5DDB400556012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C591922E5DDB400556012 /* ViewController.swift */; };
 		4F8C591D22E5DF0400556012 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C591C22E5DF0400556012 /* ListViewController.swift */; };
@@ -157,7 +157,7 @@
 		4F8C590F22E5DD9400556012 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4F8C591022E5DD9400556012 /* ErrorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		4F8C591122E5DD9400556012 /* InitializationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializationManager.swift; sourceTree = "<group>"; };
-		4F8C591222E5DD9400556012 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		4F8C591222E5DD9400556012 /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		4F8C591822E5DDB400556012 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		4F8C591922E5DDB400556012 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F8C591C22E5DF0400556012 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -533,7 +533,7 @@
 				4F8C591022E5DD9400556012 /* ErrorManager.swift */,
 				4F8C591122E5DD9400556012 /* InitializationManager.swift */,
 				4F8C590F22E5DD9400556012 /* Router.swift */,
-				4F8C591222E5DD9400556012 /* ThemeManager.swift */,
+				4F8C591222E5DD9400556012 /* Resources.swift */,
 				4F53D6BC22E8773C000FEE5C /* LoaderManager.swift */,
 				4F53D70B22EB7AA4000FEE5C /* CacheManager.swift */,
 			);
@@ -734,7 +734,7 @@
 				4F8C591422E5DD9400556012 /* ErrorManager.swift in Sources */,
 				4F53D70722EB6637000FEE5C /* InfoModel.swift in Sources */,
 				4F8C591D22E5DF0400556012 /* ListViewController.swift in Sources */,
-				4F8C591622E5DD9400556012 /* ThemeManager.swift in Sources */,
+				4F8C591622E5DD9400556012 /* Resources.swift in Sources */,
 				4F8C590A22E5DD0900556012 /* UILabel+Extensions.swift in Sources */,
 				4F53D70A22EB6760000FEE5C /* InfoViewModel.swift in Sources */,
 				4F8C591F22E5DF0B00556012 /* DetailsViewController.swift in Sources */,
