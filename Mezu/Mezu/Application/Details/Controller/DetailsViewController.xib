@@ -44,7 +44,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sF-ZC-Hdx" userLabel="Content View">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
-                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRu-pb-aeY">
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="dRu-pb-aeY">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
                             <subviews>
                                 <view contentMode="scaleToFill" horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f7V-im-yaD" userLabel="Scroll Content View">
