@@ -13,6 +13,8 @@ class PhotoPreviewCell: UICollectionViewCell {
 
     @IBOutlet weak var photoImageView: UIImageView!
 
+    var photo: Photo?
+
     override func awakeFromNib() {
         super.awakeFromNib()
 

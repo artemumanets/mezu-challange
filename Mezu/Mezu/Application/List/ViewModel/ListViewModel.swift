@@ -36,8 +36,12 @@ class ListViewModel: NSObject {
         guard let url = photo.mediumSize?.url else {
             return
         }
+        photoCell.photo = photo
 
         dataSource.fetchImageFrom(url: url) { (image) in
+            guard photoCell.photo?.id == photo.id else {
+                return
+            }
             UIView.transition(with: photoCell, duration: Animation.normal, options: .transitionCrossDissolve, animations: {
                 photoCell.photoImageView.image = image
             })
