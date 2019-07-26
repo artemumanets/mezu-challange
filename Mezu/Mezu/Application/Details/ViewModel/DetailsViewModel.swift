@@ -100,10 +100,10 @@ class DetailsViewModel {
                     sequenceRequest.fail()
                     return
                 }
-                self?.dataSource.fetchImageFrom(url: url, onDidLoad: { (image) in
+                self?.dataSource.fetchImageFrom(url: url) { (image) in
                     photoImage = image
                     sequenceRequest.success()
-                })
+                }
             }.waitAll(onSuccess: { [weak self] in
                 self?.photoDetails = PhotoDetails(photo: photo, photoInfo: photoInfo, photoImage: photoImage)
                 self?.delegate?.didFetchDetails()

@@ -66,13 +66,16 @@ class APIFetcher: FetcherProtocol {
         }
 
         DispatchQueue.global(qos: .background).async {
-            //            if request.cacheResponse, let cachedData = CacheManager.read(fromUrl: url) {
-            //                onSuccess(cachedData)
-            //            } else {
+
+            if request.cacheResponse && CacheManager.fileExists(atUrl: url), let cachedData = CacheManager.read(fromUrl: url) {
+                onSuccess(cachedData)
+                return
+            }
+
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = request.operation.method.rawValue
             urlRequest.httpBody = request.body
-            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            URLSession.shared.dataTask(with: urlRequest) { data, response, error in
 
                 if let error = error {
                     onError(.error(error))
@@ -84,30 +87,28 @@ class APIFetcher: FetcherProtocol {
                 if let httpStatusCode = (response as? HTTPURLResponse)?.statusCode, httpStatusCode != 200 {
                     onError(ServiceError.httpError(httpStatusCode))
                 }
-                //                    if !CacheManager.fileExists(atUrl: url) {
-                //                        CacheManager.write(data: data, toUrl: url)
-                //                    }
+                if request.cacheResponse && !CacheManager.fileExists(atUrl: url) {
+                    CacheManager.write(data: data, toUrl: url)
+                }
                 onSuccess(data)
-                                }
-                task.resume()
-//            }
+            }.resume()
         }
     }
 
     func fetchImageFrom(url: URL, onDidLoad: @escaping CallbackOnImageDidLoad) {
-//        if CacheManager.fileExists(atUrl: url) {
-//            DispatchQueue.global(qos: .background).async {
-//                let data = CacheManager.read(fromUrl: url)
-//                DispatchQueue.main.async {
-//                    onDidLoad(Request.image(fromData: data, defaultImage: defaultImage))
-//                }
-//            }
-//            return nil
-//        }
+        if CacheManager.fileExists(atUrl: url) {
+            DispatchQueue.global(qos: .background).async {
+                let data = CacheManager.read(fromUrl: url)
+                DispatchQueue.main.async {
+                    onDidLoad(APIFetcher.image(fromData: data))
+                }
+            }
+            return
+        }
 
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             if let data = data {
-//                CacheManager.write(data: data, toUrl: url)
+                CacheManager.write(data: data, toUrl: url)
             }
             DispatchQueue.main.async {
                 onDidLoad(APIFetcher.image(fromData: data))
