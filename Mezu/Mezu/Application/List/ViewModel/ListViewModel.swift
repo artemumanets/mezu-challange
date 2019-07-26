@@ -46,7 +46,7 @@ class ListViewModel: NSObject {
             guard photoCell.photo?.id == photo.id else {
                 return
             }
-            UIView.transition(with: photoCell, duration: Animation.normal, options: .transitionCrossDissolve, animations: {
+            UIView.transition(with: photoCell, duration: Animation.normal, options: [.transitionCrossDissolve, .allowUserInteraction], animations: {
                 photoCell.photoImageView.image = image
             })
         }
@@ -74,7 +74,7 @@ extension ListViewModel {
             self.fetchSizes(for: photos, onSuccess: { (newPhotos) in
                 self.page += 1
                 self.photos += newPhotos
-                self.hasPages = self.page <= response.photos.pages 
+                self.hasPages = self.page <= response.photos.pages
                 self.delegate?.didUpdatePhotos()
             }, onError: {
                 ErrorManager.show(description: "Error.NetworkGeneric".localized)
