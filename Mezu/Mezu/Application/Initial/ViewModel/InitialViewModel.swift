@@ -24,29 +24,26 @@ class InitalViewModel: NSObject {
         self.dataSource = dataSource
     }
 
-    func setupUI(viewController: InitialViewController) {
-        viewController.infoLabel.set(color: R.Color.content, font: R.Font.content, text: "Initial.Info".localized)
-        viewController.infoButton.tintColor = R.Color.content
+    func setupUI(viewController vc: InitialViewController) {
+        vc.infoLabel.set(color: R.Color.content, font: R.Font.content, text: "Initial.Info".localized)
+        vc.infoButton.tintColor = R.Color.content
 
-        viewController.nameTextField.delegate = self
-        viewController.nameTextField.tintColor = R.Color.accent
-        viewController.nameTextField.backgroundColor = R.Color.background
-        viewController.nameTextField.set(placeholder: "Initial.Placeholder".localized,
+        vc.mezuLogoImageView.image = R.Image.mezuLogo.withRenderingMode(.alwaysTemplate)
+        vc.mezuLogoImageView.tintColor = R.Color.content
+
+        let searchIconImageView = UIImageView(image: R.Image.iconSearch.withRenderingMode(.alwaysTemplate))
+        searchIconImageView.tintColor = R.Color.content
+        vc.nameTextField.leftViewMode = .always
+        vc.nameTextField.leftView = searchIconImageView
+        vc.nameTextField.tintColor = R.Color.content
+        vc.nameTextField.backgroundColor = R.Color.accent
+        vc.nameTextField.set(placeholder: "Initial.Placeholder".localized,
                                          placeholderColor: R.Color.placeholder,
                                          textColor: R.Color.content,
                                          borderColor: R.Color.accent)
 
         // TODO: remove this
-        viewController.nameTextField.text = "eyetwist"
-    }
-}
-
-extension InitalViewModel: UITextFieldDelegate {
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        fetchUser(username: textField.text ?? "")
-        return true
+        vc.nameTextField.text = "eyetwist"
     }
 }
 

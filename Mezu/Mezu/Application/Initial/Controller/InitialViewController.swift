@@ -15,6 +15,7 @@ class InitialViewController: ViewController {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var mezuLogoImageView: UIImageView!
 
     private lazy var viewModel = InitalViewModel(delegate: self)
 
@@ -36,6 +37,15 @@ class InitialViewController: ViewController {
 
     @IBAction func infoButtonTapped() {
         Router.modal(from: self, to: .info)
+    }
+}
+
+extension InitialViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        viewModel.fetchUser(username: textField.text ?? "")
+        return true
     }
 }
 

@@ -18,7 +18,7 @@ enum R {
         static let accent = UIColor(hex: 0xff017e)
 
         static let subcontent = UIColor(hex: 0xdfdfdf)
-        static let placeholder = Color.content.withAlphaComponent(0.5)
+        static let placeholder = Color.content.withAlphaComponent(0.8)
         static let noImage = UIColor(hex: 0xf3f3f3).withAlphaComponent(0.1)
 
         enum Navigation {
@@ -43,6 +43,7 @@ enum R {
         static let buttonClose = UIImage(named: "ButtonClose")!
         static let mezuLogo = UIImage(named: "MezuLogo")!
         static let myPhoto = UIImage(named: "MyPhoto")!
+        static let iconSearch = UIImage(named: "IconSearch")!
     }
 
     enum Layout {
