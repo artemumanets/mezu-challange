@@ -24,6 +24,7 @@ class Router {
     enum Destination {
         case list
         case details(Photo)
+        case info
     }
 
     private static func getController(for destination: Router.Destination) -> UIViewController {
@@ -31,6 +32,7 @@ class Router {
         switch destination {
         case .details(let photo): return DetailsViewController(photo: photo)
         case .list: return NavigationController(rootViewController: ListViewController())
+        case .info: return NavigationController(rootViewController: InfoViewController())
         }
     }
 }

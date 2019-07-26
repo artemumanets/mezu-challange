@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="Mezu" customModuleProvider="target">
             <connections>
+                <outlet property="infoButton" destination="rq5-Kg-osM" id="RP5-M1-3zS"/>
                 <outlet property="infoLabel" destination="nT4-G1-NlH" id="25Z-Vs-HtN"/>
                 <outlet property="logoImageView" destination="7mI-kP-Qmz" id="xSw-r4-ySa"/>
                 <outlet property="nameTextField" destination="AdT-fF-MaR" id="816-cB-DZg"/>
@@ -30,6 +31,12 @@
                         <constraint firstAttribute="width" constant="200" id="yPz-6r-ayb"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT4-G1-NlH">
+                    <rect key="frame" x="186" y="304" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-fF-MaR">
                     <rect key="frame" x="186" y="354.5" width="42" height="30"/>
                     <constraints>
@@ -39,19 +46,26 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT4-G1-NlH">
-                    <rect key="frame" x="186" y="304" width="42" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq5-Kg-osM">
+                    <rect key="frame" x="350" y="64" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="95B-T9-v2Y"/>
+                        <constraint firstAttribute="height" constant="44" id="W9a-Gm-fo9"/>
+                    </constraints>
+                    <state key="normal" image="ButtonInfo"/>
+                    <connections>
+                        <action selector="infoButtonTapped" destination="-1" eventType="touchUpInside" id="rW5-1A-2Nr"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rq5-Kg-osM" secondAttribute="trailing" constant="20" id="0nl-v0-VZM"/>
                 <constraint firstItem="nT4-G1-NlH" firstAttribute="top" secondItem="7mI-kP-Qmz" secondAttribute="bottom" constant="20" id="1xi-a8-ahh"/>
                 <constraint firstItem="AdT-fF-MaR" firstAttribute="top" secondItem="nT4-G1-NlH" secondAttribute="bottom" constant="30" id="UVU-Ne-fBT"/>
                 <constraint firstItem="nT4-G1-NlH" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="hRc-al-1PY"/>
                 <constraint firstItem="7mI-kP-Qmz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="kfw-y3-lGS"/>
+                <constraint firstItem="rq5-Kg-osM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="mPl-Cg-rAX"/>
                 <constraint firstItem="AdT-fF-MaR" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="tjb-GD-CUl"/>
                 <constraint firstItem="7mI-kP-Qmz" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="u78-cN-Jrr"/>
                 <constraint firstItem="AdT-fF-MaR" firstAttribute="width" secondItem="nT4-G1-NlH" secondAttribute="width" id="whk-79-joE"/>
@@ -61,6 +75,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ButtonInfo" width="44" height="44"/>
         <image name="FlickrLogo" width="200" height="200"/>
     </resources>
 </document>

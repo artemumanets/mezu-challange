@@ -26,6 +26,7 @@ class InitalViewModel: NSObject {
 
     func setupUI(viewController: InitialViewController) {
         viewController.infoLabel.set(color: R.Color.content, font: R.Font.content, text: "Initial.Info".localized)
+        viewController.infoButton.tintColor = R.Color.content
 
         viewController.nameTextField.delegate = self
         viewController.nameTextField.tintColor = R.Color.accent
@@ -53,6 +54,11 @@ extension InitalViewModel {
 
     func fetchUser(username: String) {
 
+        let username = username.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        guard username.count > 0 else {
+            ErrorManager.show(description: "Error.Initial.EmptyUsername".localized)
+            return
+        }
         guard LoaderManager.shared.isLoading == false else {
             return
         }
@@ -60,14 +66,27 @@ extension InitalViewModel {
         LoaderManager.shared.show()
 
         dataSource.fetch(request: FLRequestFindByUserName(username: username), onSuccess: { (response: FLResponseFindByUserName) in
+
             self.delegate?.didFetch(user: User(response: response))
-        }, onError: { error in
-            // TODO: Distinguish retry callback errors
-            ErrorManager.show(error: error, retryCallback: {
-                self.fetchUser(username: username)
+        }, onError: { (error: ServiceError<FLResponseError>) in
+
+            let errorMessage = error.message(withFilter: { (apiError: FLResponseError) -> String? in
+                return apiError.code == ErrorConstant.userNotFound.code ? ErrorConstant.userNotFound.message : nil
             })
+            if let errorMessage = errorMessage {
+                ErrorManager.show(description: errorMessage)
+            } else {
+                ErrorManager.show(error: error, retryCallback: {
+                    self.fetchUser(username: username)
+                })
+            }
         }, onFinally: {
             LoaderManager.shared.hide()
         })
     }
+}
+
+private enum ErrorConstant {
+
+    static let userNotFound: (code: Int, message: String) = (1, "Error.Initial.InvalidUsername".localized)
 }

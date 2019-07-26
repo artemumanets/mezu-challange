@@ -14,6 +14,7 @@ class InitialViewController: ViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var infoButton: UIButton!
 
     private lazy var viewModel = InitalViewModel(delegate: self)
 
@@ -31,6 +32,10 @@ class InitialViewController: ViewController {
         super.viewDidAppear(animated)
 
         nameTextField.becomeFirstResponder()
+    }
+
+    @IBAction func infoButtonTapped() {
+        Router.modal(from: self, to: .info)
     }
 }
 

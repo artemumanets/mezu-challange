@@ -41,6 +41,8 @@ enum R {
     enum Image {
 
         static let buttonClose = UIImage(named: "ButtonClose")!
+        static let mezuLogo = UIImage(named: "MezuLogo")!
+        static let myPhoto = UIImage(named: "MyPhoto")!
     }
 
     enum Layout {
