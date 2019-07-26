@@ -94,8 +94,7 @@ class APIFetcher: FetcherProtocol {
         }
     }
 
-    @discardableResult
-    func fetchImageFrom(url: URL, onDidLoad: @escaping CallbackOnImageDidLoad) -> URLSessionDataTask? {
+    func fetchImageFrom(url: URL, onDidLoad: @escaping CallbackOnImageDidLoad) {
 //        if CacheManager.fileExists(atUrl: url) {
 //            DispatchQueue.global(qos: .background).async {
 //                let data = CacheManager.read(fromUrl: url)
@@ -106,16 +105,14 @@ class APIFetcher: FetcherProtocol {
 //            return nil
 //        }
 
-        let dataTask = URLSession.shared.dataTask(with: url) { (data, _, _) in
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
             if let data = data {
 //                CacheManager.write(data: data, toUrl: url)
             }
             DispatchQueue.main.async {
                 onDidLoad(APIFetcher.image(fromData: data))
             }
-        }
-        dataTask.resume()
-        return dataTask
+        }.resume()
     }
 
     private static func image(fromData data: Data?) -> UIImage {
