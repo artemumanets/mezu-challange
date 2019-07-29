@@ -2,8 +2,8 @@
 An image gallery app which uses flicker API to show images based on user's name. Allows to select an image and preview it details.
 
 ## Requirements
-+ Xcode 10.2.1
-+ iOS 11.0
++ Xcode 10.3
++ iOS 12.0
 + Swift 5.0
 
 ## Run the project
@@ -31,7 +31,8 @@ An image gallery app which uses flicker API to show images based on user's name.
 + When user exists, but without photos, proper message is displayed (user example: artem).
 + List of photos is filtered by media attribute with value "photo".
 
-
+## Tests
+A few Unit and UI tests were implemented in order to demonstrate that the project is capable to support tests. 
 
 
 
