@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F05B54822EF335F00025BFD /* APIFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F80CB22EF23510026B0E9 /* APIFetcherMock.swift */; };
+		4F05B54A22EF35F400025BFD /* www.flickr.com_services_rest__method=flickr.people.findByUsername&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&username=eyetwist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9243822EF2A5100B23002 /* www.flickr.com_services_rest__method=flickr.people.findByUsername&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&username=eyetwist.txt */; };
+		4F05B54E22EF38D400025BFD /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F05B54D22EF38D300025BFD /* ListViewModelTests.swift */; };
+		4F05B55022EF39D500025BFD /* www.flickr.com_services_rest__method=flickr.people.getPublicPhotos&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&extras=media&page=1&per_page=50&user_id=49191827@N00.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F05B54F22EF39D500025BFD /* www.flickr.com_services_rest__method=flickr.people.getPublicPhotos&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&extras=media&page=1&per_page=50&user_id=49191827@N00.txt */; };
+		4F05B55522EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48368812101.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F05B55322EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48368812101.txt */; };
+		4F05B55622EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48391246956.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F05B55422EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48391246956.txt */; };
+		4F05B55B22EF3D7400025BFD /* InitialViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F05B55A22EF3D7400025BFD /* InitialViewModelTests.swift */; };
+		4F05B55D22EF429600025BFD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C590222E5DD0800556012 /* String+Extensions.swift */; };
+		4F05B55E22EF429C00025BFD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C592422E5DFDA00556012 /* Localizable.strings */; };
 		4F53D69F22E70E94000FEE5C /* SequenceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D68B22E70E94000FEE5C /* SequenceRequest.swift */; };
 		4F53D6A022E70E94000FEE5C /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D68D22E70E94000FEE5C /* ParserProtocol.swift */; };
 		4F53D6A122E70E94000FEE5C /* JSONDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D68E22E70E94000FEE5C /* JSONDataParser.swift */; };
@@ -25,7 +34,6 @@
 		4F53D6BD22E8773C000FEE5C /* LoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6BC22E8773C000FEE5C /* LoaderManager.swift */; };
 		4F53D6C122E877C1000FEE5C /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6C022E877C1000FEE5C /* InitialViewModel.swift */; };
 		4F53D6C422E8780B000FEE5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6C322E8780B000FEE5C /* User.swift */; };
-		4F53D6C922E8830F000FEE5C /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6C822E8830F000FEE5C /* AppData.swift */; };
 		4F53D6CB22E884DA000FEE5C /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F53D6CA22E884DA000FEE5C /* ListViewController.xib */; };
 		4F53D6CF22E88840000FEE5C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6CE22E88840000FEE5C /* ListViewModel.swift */; };
 		4F53D6D122E88ADB000FEE5C /* FLResponseGetPublicPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53D6D022E88ADB000FEE5C /* FLResponseGetPublicPhotos.swift */; };
@@ -54,8 +62,7 @@
 		4F8C58C822E5D96300556012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C58C722E5D96300556012 /* AppDelegate.swift */; };
 		4F8C58CF22E5D96400556012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C58CE22E5D96400556012 /* Assets.xcassets */; };
 		4F8C58D222E5D96400556012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C58D022E5D96400556012 /* LaunchScreen.storyboard */; };
-		4F8C58DD22E5D96400556012 /* MezuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C58DC22E5D96400556012 /* MezuTests.swift */; };
-		4F8C58E822E5D96400556012 /* MezuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C58E722E5D96400556012 /* MezuUITests.swift */; };
+		4F8C58E822E5D96400556012 /* InitialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C58E722E5D96400556012 /* InitialUITests.swift */; };
 		4F8C590822E5DD0900556012 /* Dictionary+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C590122E5DD0800556012 /* Dictionary+Networking.swift */; };
 		4F8C590922E5DD0900556012 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C590222E5DD0800556012 /* String+Extensions.swift */; };
 		4F8C590A22E5DD0900556012 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C590322E5DD0800556012 /* UILabel+Extensions.swift */; };
@@ -73,6 +80,8 @@
 		4F8C592122E5DF1500556012 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C592022E5DF1500556012 /* InitialViewController.swift */; };
 		4F8C592322E5DF5100556012 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C592222E5DF5100556012 /* NavigationController.swift */; };
 		4F8C592522E5DFDA00556012 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C592422E5DFDA00556012 /* Localizable.strings */; };
+		4FF9242622EF27E600B23002 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C590222E5DD0800556012 /* String+Extensions.swift */; };
+		4FF9242722EF27E600B23002 /* Dictionary+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C590122E5DD0800556012 /* Dictionary+Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +102,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F05B54D22EF38D300025BFD /* ListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
+		4F05B54F22EF39D500025BFD /* www.flickr.com_services_rest__method=flickr.people.getPublicPhotos&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&extras=media&page=1&per_page=50&user_id=49191827@N00.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "www.flickr.com_services_rest__method=flickr.people.getPublicPhotos&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&extras=media&page=1&per_page=50&user_id=49191827@N00.txt"; sourceTree = "<group>"; };
+		4F05B55322EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48368812101.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48368812101.txt"; sourceTree = "<group>"; };
+		4F05B55422EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48391246956.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48391246956.txt"; sourceTree = "<group>"; };
+		4F05B55A22EF3D7400025BFD /* InitialViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewModelTests.swift; sourceTree = "<group>"; };
+		4F1F80CB22EF23510026B0E9 /* APIFetcherMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIFetcherMock.swift; sourceTree = "<group>"; };
 		4F53D68B22E70E94000FEE5C /* SequenceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceRequest.swift; sourceTree = "<group>"; };
 		4F53D68D22E70E94000FEE5C /* ParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
 		4F53D68E22E70E94000FEE5C /* JSONDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataParser.swift; sourceTree = "<group>"; };
@@ -111,7 +126,6 @@
 		4F53D6BC22E8773C000FEE5C /* LoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderManager.swift; sourceTree = "<group>"; };
 		4F53D6C022E877C1000FEE5C /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		4F53D6C322E8780B000FEE5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4F53D6C822E8830F000FEE5C /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		4F53D6CA22E884DA000FEE5C /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		4F53D6CE22E88840000FEE5C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		4F53D6D022E88ADB000FEE5C /* FLResponseGetPublicPhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLResponseGetPublicPhotos.swift; sourceTree = "<group>"; };
@@ -143,10 +157,9 @@
 		4F8C58D122E5D96400556012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F8C58D322E5D96400556012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8C58D822E5D96400556012 /* MezuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MezuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F8C58DC22E5D96400556012 /* MezuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MezuTests.swift; sourceTree = "<group>"; };
 		4F8C58DE22E5D96400556012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8C58E322E5D96400556012 /* MezuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MezuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F8C58E722E5D96400556012 /* MezuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MezuUITests.swift; sourceTree = "<group>"; };
+		4F8C58E722E5D96400556012 /* InitialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialUITests.swift; sourceTree = "<group>"; };
 		4F8C58E922E5D96400556012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8C590122E5DD0800556012 /* Dictionary+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Networking.swift"; sourceTree = "<group>"; };
 		4F8C590222E5DD0800556012 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -165,6 +178,7 @@
 		4F8C592022E5DF1500556012 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		4F8C592222E5DF5100556012 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		4F8C592422E5DFDA00556012 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		4FF9243822EF2A5100B23002 /* www.flickr.com_services_rest__method=flickr.people.findByUsername&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&username=eyetwist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "www.flickr.com_services_rest__method=flickr.people.findByUsername&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&username=eyetwist.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +206,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F05B55922EF3D5300025BFD /* ViewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				4F05B55A22EF3D7400025BFD /* InitialViewModelTests.swift */,
+				4F05B54D22EF38D300025BFD /* ListViewModelTests.swift */,
+			);
+			path = ViewModelTest;
+			sourceTree = "<group>";
+		};
+		4F1F80CA22EF23460026B0E9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				4F1F80CB22EF23510026B0E9 /* APIFetcherMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		4F53D68C22E70E94000FEE5C /* Parser */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,14 +290,6 @@
 				4F53D6C022E877C1000FEE5C /* InitialViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4F53D6C522E87850000FEE5C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4F53D6C822E8830F000FEE5C /* AppData.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		4F53D6CC22E887D4000FEE5C /* Controller */ = {
@@ -416,7 +439,9 @@
 		4F8C58DB22E5D96400556012 /* MezuTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F8C58DC22E5D96400556012 /* MezuTests.swift */,
+				4FF9243722EF2A4A00B23002 /* Resources */,
+				4F1F80CA22EF23460026B0E9 /* Mock */,
+				4F05B55922EF3D5300025BFD /* ViewModelTest */,
 				4F8C58DE22E5D96400556012 /* Info.plist */,
 			);
 			path = MezuTests;
@@ -425,7 +450,7 @@
 		4F8C58E622E5D96400556012 /* MezuUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4F8C58E722E5D96400556012 /* MezuUITests.swift */,
+				4F8C58E722E5D96400556012 /* InitialUITests.swift */,
 				4F8C58E922E5D96400556012 /* Info.plist */,
 			);
 			path = MezuUITests;
@@ -456,7 +481,6 @@
 		4F8C58F822E5DC3B00556012 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				4F53D6C522E87850000FEE5C /* Model */,
 				4F8C591722E5DDAC00556012 /* Controller */,
 				4F53D6B922E876FC000FEE5C /* View */,
 			);
@@ -564,6 +588,17 @@
 				4F8C591922E5DDB400556012 /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4FF9243722EF2A4A00B23002 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4FF9243822EF2A5100B23002 /* www.flickr.com_services_rest__method=flickr.people.findByUsername&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&username=eyetwist.txt */,
+				4F05B54F22EF39D500025BFD /* www.flickr.com_services_rest__method=flickr.people.getPublicPhotos&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&extras=media&page=1&per_page=50&user_id=49191827@N00.txt */,
+				4F05B55422EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48391246956.txt */,
+				4F05B55322EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48368812101.txt */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -686,6 +721,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F05B55622EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48391246956.txt in Resources */,
+				4F05B55522EF3C3D00025BFD /* www.flickr.com_services_rest__method=flickr.photos.getSizes&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&photo_id=48368812101.txt in Resources */,
+				4F05B55022EF39D500025BFD /* www.flickr.com_services_rest__method=flickr.people.getPublicPhotos&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&extras=media&page=1&per_page=50&user_id=49191827@N00.txt in Resources */,
+				4F05B54A22EF35F400025BFD /* www.flickr.com_services_rest__method=flickr.people.findByUsername&api_key=f9cc014fa76b098f9e82f1c288379ea1&nojsoncallback=1&format=json&username=eyetwist.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +732,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F05B55E22EF429C00025BFD /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,7 +797,6 @@
 				4F53D6CF22E88840000FEE5C /* ListViewModel.swift in Sources */,
 				4F53D6D122E88ADB000FEE5C /* FLResponseGetPublicPhotos.swift in Sources */,
 				4F53D6A122E70E94000FEE5C /* JSONDataParser.swift in Sources */,
-				4F53D6C922E8830F000FEE5C /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,7 +804,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F8C58DD22E5D96400556012 /* MezuTests.swift in Sources */,
+				4F05B55B22EF3D7400025BFD /* InitialViewModelTests.swift in Sources */,
+				4FF9242622EF27E600B23002 /* String+Extensions.swift in Sources */,
+				4FF9242722EF27E600B23002 /* Dictionary+Networking.swift in Sources */,
+				4F05B54E22EF38D400025BFD /* ListViewModelTests.swift in Sources */,
+				4F05B54822EF335F00025BFD /* APIFetcherMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,7 +816,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F8C58E822E5D96400556012 /* MezuUITests.swift in Sources */,
+				4F05B55D22EF429600025BFD /* String+Extensions.swift in Sources */,
+				4F8C58E822E5D96400556012 /* InitialUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,7 +971,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94F5F34EVW;
 				INFOPLIST_FILE = "$(SRCROOT)/Mezu/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -946,7 +990,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94F5F34EVW;
 				INFOPLIST_FILE = "$(SRCROOT)/Mezu/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -965,6 +1009,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MezuTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -985,6 +1030,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MezuTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1004,6 +1050,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MezuUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1023,6 +1070,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MezuUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

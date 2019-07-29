@@ -21,15 +21,17 @@ class ListViewModel: NSObject {
 
     private var page = Configuration.Flickr.listFirstPage
     private var hasPages = true
+    private var user: User
     var photos = [Photo]()
 
-    init(delegate: ListViewModelDelegate?, dataSource: FetcherProtocol = APIFetcher.default) {
+    init(user: User, delegate: ListViewModelDelegate?, dataSource: FetcherProtocol = APIFetcher.default) {
+        self.user = user
         self.delegate = delegate
         self.dataSource = dataSource
     }
 
     func setupUI(viewController vc: ListViewController) {
-        vc.title = AppData.shared.user.name
+        vc.title = user.name
         vc.navigationItem.rightBarButtonItem = vc.closeButton
         vc.noContentLabel.set(color: R.Color.content, font: R.Font.content, text: "Error.List.NoPhotosToShow".localized)
         vc.noContentLabel.isHidden = true
@@ -68,7 +70,7 @@ extension ListViewModel {
 
         LoaderManager.shared.show()
 
-        let request = FLRequestGetPublicPhotos(userId: AppData.shared.user.nsid, perPage: Configuration.Flickr.listPageSize, page: page)
+        let request = FLRequestGetPublicPhotos(userId: user.nsid, perPage: Configuration.Flickr.listPageSize, page: page)
         dataSource.fetch(request: request, onSuccess: { (response: FLResponseGetPublicPhotos) in
             let photos: [FLPhoto] = response.photos.photo.filter { $0.media == Constant.mediaType }
             self.fetchSizes(for: photos, onSuccess: { (newPhotos) in

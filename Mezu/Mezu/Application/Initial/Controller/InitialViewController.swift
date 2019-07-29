@@ -56,7 +56,6 @@ extension InitialViewController: UITextFieldDelegate {
 extension InitialViewController: InitalViewModelDelegate {
 
     func didFetch(user: User) {
-        AppData.shared.user = user
-        Router.modal(from: self, to: .list)
+        Router.modal(from: self, to: .list(user))
     }
 }

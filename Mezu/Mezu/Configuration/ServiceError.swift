@@ -18,7 +18,7 @@ enum ServiceError<E: ResponseProtocol>: Error {
 
 extension ServiceError: LocalizedError {
 
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .invalidAPIUrl: return "Error.APIInvalidURL".localized
         case .unexpectedAPIResponse: return "Error.APIGeneric".localized

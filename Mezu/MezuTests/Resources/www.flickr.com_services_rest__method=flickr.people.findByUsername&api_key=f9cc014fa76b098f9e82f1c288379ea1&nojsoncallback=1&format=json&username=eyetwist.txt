@@ -1,0 +1,2 @@
+{ "user": { "id": "49191827@N00", "nsid": "49191827@N00",
+"username": { "_content": "eyetwist" } }, "stat": "ok" }

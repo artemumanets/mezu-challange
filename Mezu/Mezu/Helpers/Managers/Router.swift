@@ -22,7 +22,7 @@ class Router {
     private init() {}
 
     enum Destination {
-        case list
+        case list(User)
         case details(Photo)
         case info
     }
@@ -31,7 +31,7 @@ class Router {
 
         switch destination {
         case .details(let photo): return DetailsViewController(photo: photo)
-        case .list: return NavigationController(rootViewController: ListViewController())
+        case .list(let user): return NavigationController(rootViewController: ListViewController(user: user))
         case .info: return NavigationController(rootViewController: InfoViewController())
         }
     }

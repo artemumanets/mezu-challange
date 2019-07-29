@@ -15,10 +15,11 @@ class ListViewController: ViewController {
     @IBOutlet weak var noContentLabel: UILabel!
     lazy var closeButton = UIBarButtonItem(image: R.Image.buttonClose, style: .plain, target: self, action: #selector(closeButtonTapped))
 
-    private lazy var viewModel = ListViewModel(delegate: self)
+    private var viewModel: ListViewModel!
 
-    convenience init() {
+    convenience init(user: User) {
         self.init(type: ListViewController.self)
+        viewModel = ListViewModel(user: user, delegate: self)
     }
 
     deinit {

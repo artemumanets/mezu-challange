@@ -41,9 +41,6 @@ class InitalViewModel: NSObject {
                                          placeholderColor: R.Color.placeholder,
                                          textColor: R.Color.content,
                                          borderColor: R.Color.accent)
-
-        // TODO: remove this
-        vc.nameTextField.text = "eyetwist"
     }
 }
 
